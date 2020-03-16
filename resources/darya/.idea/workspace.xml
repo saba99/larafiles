@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a368fda7-fc56-4b84-b2ca-fe59ca864963" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../../Real_Estate/themplate/custom/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Real_Estate/themplate/custom/.idea/jsLinters/jshint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../Real_Estate/themplate/custom/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/Student_score.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/Summary_Info_Training.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/Training_Report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/boy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/checklist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/clipboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/css/Apprenticeship_request.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/css/Student_score.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/css/maina.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/css/style_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/font/IRANSansWeb.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/font/IRANSansWeb.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/font/IRANSansWeb.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/font/IRANSansWeb.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/govahi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/20181001130207_204.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/2653963_4570880.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/Hassan_Rouhani_in_Saadabad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/img/user-silhouette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/presentation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../uni/scroll.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../EXAMPLE CODE/login-signup-modal-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../EXAMPLE CODE/login-signup-modal-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../EXAMPLE CODE/shoppers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../EXAMPLE CODE/shoppers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Ranger-Brown-60-x60-cm-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../asa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../nn.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../nn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/_DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/css/_DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/css/normalize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/_DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/js/_DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/js/jquery-1.11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/js/jquery.nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/_DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shAutoloader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushAS3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushAppleScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushBash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushCSharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushColdFusion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushCpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushCss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushDelphi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushDiff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushErlang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushGroovy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushJScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushJava.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushJavaFX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushPerl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushPhp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushPlain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushPowerShell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushPython.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushRuby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushSass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushScala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushSql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushVb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shBrushXml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/scripts/shLegacy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCore.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shCoreRDark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/Karma Shop-doc/syntax-highlighter/styles/shThemeRDark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/contact_process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/css/nice-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/css/nice-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/banner/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/banner/next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/banner/prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/banner/prev.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/product/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/product/next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/product/prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/img/product/prev.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/js/nouislider.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/js/nouislider.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/prepros-6.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_blog.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_contact.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_elements.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_predefine.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_product.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/scss/theme/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/single-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/single-blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/single-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/single-product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../karma/rtl/karma/tracking.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../karma/rtl/karma/tracking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../sxsxs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../tile2.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../vue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../vue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../vue/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../vue/index2.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1400727376">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.133" value="1" />
+          <entry key="project.open.time.161" value="1" />
+          <entry key="project.open.time.162" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.80" value="1" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="19" />
+          <entry key="html" value="182" />
+          <entry key="js" value="14" />
+          <entry key="png" value="1" />
+          <entry key="rnc" value="1" />
+          <entry key="scss" value="2" />
+          <entry key="svg" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="19" />
+          <entry key="HTML" value="182" />
+          <entry key="Image" value="1" />
+          <entry key="JavaScript" value="14" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="SCSS" value="2" />
+          <entry key="SVG" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="97" />
+          <entry key="html" value="12981" />
+          <entry key="js" value="213" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="97" />
+          <entry key="HTML" value="12981" />
+          <entry key="JavaScript" value="213" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="641151654">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="82" />
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="82" />
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="152" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="152" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24610">
+              <caret line="1070" column="49" selection-start-line="1070" selection-start-column="49" selection-end-line="1070" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/faq.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28083">
+              <caret line="1221" column="57" selection-start-line="1221" selection-start-column="57" selection-end-line="1221" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23092">
+              <caret line="1004" column="53" selection-start-line="1004" selection-start-column="53" selection-end-line="1004" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cards.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carieer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29440">
+              <caret line="1280" column="53" selection-start-line="1280" selection-start-column="53" selection-end-line="1280" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27715">
+              <caret line="1205" column="53" selection-start-line="1205" selection-start-column="53" selection-end-line="1205" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="1147" column="49" selection-start-line="1147" selection-start-column="49" selection-end-line="1147" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>nav</find>
+      <find>nav-tabs</find>
+      <find>pull-left</find>
+      <find>پاسخ-link</find>
+      <find>link</find>
+      <find>Codepoet_Biplo</find>
+      <find>پشتیبانی__form</find>
+      <find>_title</find>
+      <find>The Message for the mars</find>
+      <find>thumb-slider</find>
+      <find>.item-preview .item__preview-thumb .thumb-slider</find>
+      <find>item__preview-slider</find>
+      <find>با نویسنده تماس بگیرید</find>
+      <find>tab-content-wrapper</find>
+      <find>Post Comment</find>
+      <find>sidebar-card</find>
+      <find>col-lg-4 col-md-6</find>
+      <find>thread_review</find>
+      <find>following</find>
+      <find>thread_review2</find>
+      <find>.author-card .author-infos .author-badges ul li</find>
+      <find>countdown</find>
+      <find>job</find>
+      <find>dattaPikkara</find>
+      <find>slick-track</find>
+      <find>images/new/svg/grid.svg</find>
+      <find>filter__option filter--layout</find>
+      <find>.svg</find>
+      <find>images/new/new/</find>
+      <find>images/</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>کاربر تست</replace>
+      <replace>سلام دنیا!</replace>
+      <replace>80 تومان</replace>
+      <replace>اندازه دکمه ها</replace>
+      <replace>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</replace>
+      <replace>replay-link</replace>
+      <replace>reply-link</replace>
+      <replace>پشتیبانی__form</replace>
+      <replace>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</replace>
+      <replace>پیام برای ما</replace>
+      <replace>قالب وردپرس</replace>
+      <replace>images/new/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/all-products-list.html" />
+        <option value="$PROJECT_DIR$/category-list.html" />
+        <option value="$PROJECT_DIR$/search-product.html" />
+        <option value="$PROJECT_DIR$/single-product.html" />
+        <option value="$PROJECT_DIR$/single-product-v2.html" />
+        <option value="$PROJECT_DIR$/single-product-v3.html" />
+        <option value="$PROJECT_DIR$/cart.html" />
+        <option value="$PROJECT_DIR$/checkout.html" />
+        <option value="$PROJECT_DIR$/author.html" />
+        <option value="$PROJECT_DIR$/author-items.html" />
+        <option value="$PROJECT_DIR$/author-reviews.html" />
+        <option value="$PROJECT_DIR$/author-followers.html" />
+        <option value="$PROJECT_DIR$/author-following.html" />
+        <option value="$PROJECT_DIR$/notification.html" />
+        <option value="$PROJECT_DIR$/message.html" />
+        <option value="$PROJECT_DIR$/message-compose.html" />
+        <option value="$PROJECT_DIR$/favourites.html" />
+        <option value="$PROJECT_DIR$/dashboard.html" />
+        <option value="$PROJECT_DIR$/dashboard-add-credit.html" />
+        <option value="$PROJECT_DIR$/dashboard-purchase.html" />
+        <option value="$PROJECT_DIR$/dashboard-setting.html" />
+        <option value="$PROJECT_DIR$/dashboard-statement.html" />
+        <option value="$PROJECT_DIR$/dashboard-upload.html" />
+        <option value="$PROJECT_DIR$/dashboard-withdrawal.html" />
+        <option value="$PROJECT_DIR$/invoice.html" />
+        <option value="$PROJECT_DIR$/dashboard-manage-item.html" />
+        <option value="$PROJECT_DIR$/add-payment-method.html" />
+        <option value="$PROJECT_DIR$/support-forum.html" />
+        <option value="$PROJECT_DIR$/support-forum-detail.html" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/recover-pass.html" />
+        <option value="$PROJECT_DIR$/customer-dashboard.html" />
+        <option value="$PROJECT_DIR$/customer-downloads.html" />
+        <option value="$PROJECT_DIR$/customer-info.html" />
+        <option value="$PROJECT_DIR$/blog1.html" />
+        <option value="$PROJECT_DIR$/blog2.html" />
+        <option value="$PROJECT_DIR$/single-blog.html" />
+        <option value="$PROJECT_DIR$/how-it-works.html" />
+        <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/pricing.html" />
+        <option value="$PROJECT_DIR$/faq.html" />
+        <option value="$PROJECT_DIR$/affiliate.html" />
+        <option value="$PROJECT_DIR$/term-condition.html" />
+        <option value="$PROJECT_DIR$/event.html" />
+        <option value="$PROJECT_DIR$/event-detail.html" />
+        <option value="$PROJECT_DIR$/badges.html" />
+        <option value="$PROJECT_DIR$/404.html" />
+        <option value="$PROJECT_DIR$/carieer.html" />
+        <option value="$PROJECT_DIR$/job-detail.html" />
+        <option value="$PROJECT_DIR$/contact.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="245" />
+    <option name="width" value="1370" />
+    <option name="height" value="788" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="darya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darya" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/xampp3/htdocs/uniquiz" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PROJECT\project_start\ltr_to_rtl\martplacehtml\rtl\martplacehtml-210\src\js\date_plugin" />
+      <recent name="D:\PROJECT\project_start\ltr_to_rtl\martplacehtml\rtl\martplacehtml-210\src\css\date_plugin" />
+      <recent name="D:\PROJECT\project_start\ltr_to_rtl\martplacehtml\rtl\martplacehtml-210\src\fonts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="about.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/src/about.html">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.about.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a368fda7-fc56-4b84-b2ca-fe59ca864963" name="Default Changelist" comment="" />
+      <created>1554110996146</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554110996146</updated>
+      <workItem from="1554111009565" duration="8929000" />
+      <workItem from="1554192316906" duration="12711000" />
+      <workItem from="1554282405111" duration="10081000" />
+      <workItem from="1554365521718" duration="5773000" />
+      <workItem from="1554377594864" duration="9112000" />
+      <workItem from="1554525195581" duration="91000" />
+      <workItem from="1555061083336" duration="14312000" />
+      <workItem from="1555127765650" duration="138000" />
+      <workItem from="1555171309675" duration="752000" />
+      <workItem from="1555215472329" duration="318000" />
+      <workItem from="1555252428781" duration="7528000" />
+      <workItem from="1555300914655" duration="159000" />
+      <workItem from="1559203455271" duration="3755000" />
+      <workItem from="1559212750031" duration="9666000" />
+      <workItem from="1559300555912" duration="265000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="83590000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31240544" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32861635" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30786687" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32861635" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/vendor/jquery-ui.min.js</url>
+          <line>415</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/search-product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="1127" column="60" selection-start-line="1127" selection-start-column="60" selection-end-line="1127" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="1053" column="64" selection-start-line="1053" selection-start-column="64" selection-end-line="1053" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/all-products-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="1264" column="56" selection-start-line="1264" selection-start-column="56" selection-end-line="1264" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-product-v2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="1027" column="52" selection-start-line="1027" selection-start-column="52" selection-end-line="1027" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-product-v3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="64" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-636">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="64" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="29" column="64" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author-items.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37613">
+          <caret line="1656" column="53" selection-start-line="1656" selection-start-column="53" selection-end-line="1656" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author-reviews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38372">
+          <caret line="1702" column="53" selection-start-line="1702" selection-start-column="53" selection-end-line="1702" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author-followers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39430">
+          <caret line="1736" column="53" selection-start-line="1736" selection-start-column="53" selection-end-line="1736" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/author-following.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39430">
+          <caret line="1736" column="49" selection-start-line="1736" selection-start-column="49" selection-end-line="1736" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notification.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30828">
+          <caret line="1355" column="49" selection-start-line="1355" selection-start-column="49" selection-end-line="1355" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-add-credit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29241">
+          <caret line="1293" column="53" selection-start-line="1293" selection-start-column="53" selection-end-line="1293" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-setting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33611">
+          <caret line="1479" column="49" selection-start-line="1479" selection-start-column="49" selection-end-line="1479" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-statement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34071">
+          <caret line="1496" column="49" selection-start-line="1496" selection-start-column="49" selection-end-line="1496" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-withdrawal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28252">
+          <caret line="1243" column="53" selection-start-line="1243" selection-start-column="53" selection-end-line="1243" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-purchase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40534">
+          <caret line="1777" column="49" selection-start-line="1777" selection-start-column="49" selection-end-line="1777" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="29" column="67" lean-forward="true" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favourites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48906">
+          <caret line="2148" column="49" selection-start-line="2148" selection-start-column="49" selection-end-line="2148" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard-manage-item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="1493" column="57" selection-start-line="1493" selection-start-column="57" selection-end-line="1493" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add-payment-method.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28321">
+          <caret line="1246" column="53" selection-start-line="1246" selection-start-column="53" selection-end-line="1246" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support-forum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35382">
+          <caret line="1565" column="53" selection-start-line="1565" selection-start-column="53" selection-end-line="1565" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/support-forum-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28919">
+          <caret line="1272" column="53" selection-start-line="1272" selection-start-column="53" selection-end-line="1272" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26458">
+          <caret line="1172" column="49" selection-start-line="1172" selection-start-column="49" selection-end-line="1172" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message-compose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32185">
+          <caret line="1421" column="53" selection-start-line="1421" selection-start-column="53" selection-end-line="1421" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24388">
+          <caret line="1075" column="49" selection-start-line="1075" selection-start-column="49" selection-end-line="1075" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recover-pass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23721">
+          <caret line="1046" column="53" selection-start-line="1046" selection-start-column="53" selection-end-line="1046" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25515">
+          <caret line="1121" column="49" selection-start-line="1121" selection-start-column="49" selection-end-line="1121" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-downloads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25032">
+          <caret line="1109" column="53" selection-start-line="1109" selection-start-column="53" selection-end-line="1109" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26297">
+          <caret line="1158" column="53" selection-start-line="1158" selection-start-column="53" selection-end-line="1158" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30483">
+          <caret line="1337" column="53" selection-start-line="1337" selection-start-column="53" selection-end-line="1337" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35796">
+          <caret line="1568" column="49" selection-start-line="1568" selection-start-column="49" selection-end-line="1568" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/how-it-works.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25277">
+          <caret line="1115" column="53" selection-start-line="1115" selection-start-column="53" selection-end-line="1115" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40603">
+          <caret line="1807" column="53" selection-start-line="1807" selection-start-column="53" selection-end-line="1807" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pricing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26343">
+          <caret line="1160" column="53" selection-start-line="1160" selection-start-column="53" selection-end-line="1160" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/affiliate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/term-condition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24894">
+          <caret line="1094" column="49" selection-start-line="1094" selection-start-column="49" selection-end-line="1094" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29540">
+          <caret line="1299" column="53" selection-start-line="1299" selection-start-column="53" selection-end-line="1299" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="1335" column="73" selection-start-line="1335" selection-start-column="73" selection-end-line="1335" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/badges.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24610">
+          <caret line="1070" column="49" selection-start-line="1070" selection-start-column="49" selection-end-line="1070" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28083">
+          <caret line="1221" column="57" selection-start-line="1221" selection-start-column="57" selection-end-line="1221" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23092">
+          <caret line="1004" column="53" selection-start-line="1004" selection-start-column="53" selection-end-line="1004" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cards.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carieer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29440">
+          <caret line="1280" column="53" selection-start-line="1280" selection-start-column="53" selection-end-line="1280" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27715">
+          <caret line="1205" column="53" selection-start-line="1205" selection-start-column="53" selection-end-line="1205" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="1147" column="49" selection-start-line="1147" selection-start-column="49" selection-end-line="1147" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
