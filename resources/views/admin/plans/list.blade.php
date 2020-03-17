@@ -10,17 +10,20 @@
 
 @include('admin.users.notification')
 
-@if($files && count($files)>0)
+@if($plans && count($plans)>0)
 <table class="table table-bordered">
 
 <thead>
    @include('admin.plans.columns')
 </thead>
-@foreach($files as $file)
+@foreach($plans as $plan)
 
-@include('admin.plans.item',$file)
+@include('admin.plans.item',$plan)
 
 @endforeach
+@else   
+
+@include('admin.plans.noitem')
 </table>
 @endif
 

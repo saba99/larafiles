@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Payment;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -42,6 +43,12 @@ class User extends Authenticatable
 
         $this->attributes['password']=bcrypt($value);
         
+
+    }
+    public function payments(){
+
+        return $this->hasMany(Payment::class);
+
 
     }
 }

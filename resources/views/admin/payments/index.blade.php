@@ -9,17 +9,17 @@
 
 @include('admin.users.notification')
 
-@if($plans && count($plans)>0)
+@if($payments && count($payments)>0)
 <table class="table table-bordered">
 
 <thead>
     <tr>
-      @include('admin.plans.columns')
+      @include('admin.payments.columns')
     </tr>
 </thead>
-@foreach($plans as $plan)
+@foreach($payments as $payment)
 
-@include('admin.plans.item',$plan)
+@include('admin.payments.item',$payment)
 
 @endforeach
 </table>

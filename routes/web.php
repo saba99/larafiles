@@ -47,8 +47,28 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
     Route::post('/plans/create', 'PlansController@store')->name('admin.plans.store');
     Route::get('/plans/edit/{plan_id}', 'PlansController@edit')->name('admin.plans.edit');
     Route::post('/plans/update/{plan_id}', 'PlansController@update')->name('admin.plans.update');
+    Route::get('/plans/delete/{plan_id}', 'PlansController@delete')->name('admin.plans.delete');
 
-    
+    //PACKAGES  ROUTES 
+
+    Route::get('/packages', 'PackagesController@index')->name('admin.packages.list');
+    Route::get('/packages/create', 'PackagesController@create')->name('admin.packages.create');
+    Route::post('/packages/create', 'PackagesController@store')->name('admin.packages.store');
+    Route::get('/packages/edit/{package_id}', 'PackagesController@edit')->name('admin.packages.edit');
+    Route::post('/packages/update/{package_id}', 'PackagesController@update')->name('admin.packages.update');
+    Route::get('/packages/delete/{package_id}', 'PackagesController@delete')->name('admin.packages.delete');
+    Route::get('/packages/sync_files/{package_id}', 'PackagesController@syncFiles')->name('admin.packages.sync_files');
+    Route::post('/packages/sync_files/{package_id}', 'PackagesController@updateSyncFiles')->name('admin.packages.sync_files');
+
+    //PAYMENTS  ROUTES 
+
+    Route::get('/payments', 'PaymentController@index')->name('admin.payments.list');
+    /*Route::get('/payments/create', 'PaymentController@create')->name('admin.payments.create');
+    Route::post('/payments/create', 'PaymentController@store')->name('admin.payments.store');
+    Route::get('/payments/edit/{payment_id}', 'PaymentController@edit')->name('admin.payments.edit');
+    Route::post('/payments/update/{payment_id}', 'PaymentController@update')->name('admin.payments.update');*/
+    Route::get('/payments/delete/{payment_id}', 'PaymentController@delete')->name('admin.payments.delete');
+   
 
 });
 

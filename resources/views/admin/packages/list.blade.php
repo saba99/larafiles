@@ -1,6 +1,7 @@
 @extends('admin.layouts.admin')
 
 
+
 @section('ionicons')
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 @endsection
@@ -9,19 +10,20 @@
 
 @include('admin.users.notification')
 
-@if($plans && count($plans)>0)
+@if($packeges && count($packages)>0)
 <table class="table table-bordered">
 
 <thead>
-    <tr>
-      @include('admin.plans.columns')
-    </tr>
+   @include('admin.packeges.columns')
 </thead>
-@foreach($plans as $plan)
+@foreach($packeges as $packeges)
 
-@include('admin.plans.item',$plan)
+@include('admin.packeges.item',$packege)
 
 @endforeach
+@else   
+
+@include('admin.packeges.noitem')
 </table>
 @endif
 

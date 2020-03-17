@@ -1,0 +1,45 @@
+@extends('admin.layouts.admin')
+
+@section('content')
+
+
+<form action="{{route('admin.packages.update',$packegeItem->id)}}" method="post">
+
+  
+@csrf
+
+<div class="row">
+   
+   <div class="col-xs-12 col-md-6">
+
+      @include('admin.partials.errors')
+
+    <div class="form-group">
+
+   <lable for="packege_title">عنوان پکیج :</lable>
+   
+   <input type="text" class="form-control" name="packege_title"  value="{{old('packege_title',isset($packegeItem) ? $packegeItem->packege_title : '')}}">
+</div>  
+ 
+ <div class="form-group">
+
+   <lable for="packege_price">قیمت:</lable>
+   
+   <input type="text" class="form-control" name="packege_price"  value="{{old('packege_price',isset($packegeItem) ? $packegeItem->packege_price : '')}}">
+</div>  
+
+
+ <div class="form-group">
+   
+    <button type="submit" class="btn btn-success" >
+       ذخیره اطلاعات
+    </button>
+ </div>
+   </div>
+</div>
+
+
+</form>
+
+
+@endsection
