@@ -9,10 +9,11 @@
       
        <a href="{{route('admin.plans.edit',[$plan->id])}}">
            <ion-icon name="create-outline"></ion-icon>
+            <button type="submit" class="btn btn-warning">ویرایش</button>
         </a>
         <a href="{{route('admin.plans.delete',$plan->id)}}">
 
-    
+    <button type="submit" class="btn btn-danger">حذف</button>
    <ion-icon name="trash-outline"></ion-icon>
 </a>
     </td>

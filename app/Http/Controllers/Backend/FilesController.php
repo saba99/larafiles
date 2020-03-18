@@ -85,11 +85,11 @@ class FilesController extends Controller
         $file->file_size= $cover->getClientSize();
         ($file->file_name = $cover->getClientOriginalName());
         //($file->filename = $cover->getFilename() . '.' . $extension);
-        dd($file->save());
+        if($file->save()){
 
-        
-        
-        
+            return redirect()->route('admin.files.list')->with('success', 'فایل جدید با موفقیت ذخیره شد ');
+        }
+
 
     }
 
@@ -97,15 +97,59 @@ class FilesController extends Controller
 
         if ($file_id && ctype_digit($file_id)) {
 
-            $userItem = Files::findOrFail($file_id);
+            $FileItem = Files::findOrFail($file_id);
 
 
-            if ($userItem && $userItem instanceof Files) {
+            if ($FileItem && $FileItem instanceof Files) {
 
-                return view('admin.files.edit', compact(['fileItem']))->with(['panel_title' => 'ویرایش فایل']);
+                return view('admin.files.edit', compact(['FileItem']))->with(['panel_title' => 'ویرایش فایل']);
             }
         }
 
    
+    }
+
+    public function update(Request $request, $file_id)
+    {
+           
+        ($file_id = intval($file_id));
+
+        ($FileItem = Files::findOrFail($file_id));
+        
+        
+        $cover = $request->file('fileItem');
+        $extension = $cover->getClientOriginalExtension();
+        Storage::disk('public')->put($cover->getFilename() . '.' . $extension,  File::get($cover));
+
+        //$file = new Files();
+        $FileItem->file_title = $request->file_title;
+        $FileItem->file_description = $request->file_description;
+        $FileItem->file_type = $cover->getClientMimeType();
+        $FileItem->file_size = $cover->getClientSize();
+        ($FileItem->file_name = $cover->getClientOriginalName());
+        //($file->filename = $cover->getFilename() . '.' . $extension);
+        if ($FileItem->save()) {
+
+            return redirect()->route('admin.files.list')->with('success', 'فایل  با موفقیت  به روز رسانی شد ');
+        }
+
+     
+       
+}
+
+    public function delete($file_id)
+    {
+
+
+        $file_id = intval($file_id);
+
+        $FileItem = Files::findOrFail($file_id);
+
+        if ($FileItem) {
+
+            $FileItem->delete();
+
+            return redirect()->route('admin.files.list')->with('success', 'فایل مورد نظر با موفقیت حذف شد ');
+        }
     }
 }

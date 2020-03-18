@@ -72,4 +72,9 @@ return view('admin.categories.index',compact(['categories']))->with('panel_title
 } 
 
    } 
+   
+   public function sample(){
+
+      return view('admin.categories.sample');
+   }
 }

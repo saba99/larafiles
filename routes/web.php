@@ -38,6 +38,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
     Route::post('/files/create', 'FilesController@store')->name('admin.files.store');
     Route::get('/files/edit/{file_id}', 'FilesController@edit')->name('admin.files.edit');
     Route::post('/files/update/{file_id}', 'FilesController@update')->name('admin.files.update');
+    Route::get('/files/delete/{file_id}', 'FilesController@delete')->name('admin.files.delete');
 
 
     //PLANS  ROUTES 
@@ -68,17 +69,50 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
     Route::get('/payments/delete/{payment_id}', 'PaymentController@delete')->name('admin.payments.delete');
 
     //CATEGORIES  ROUTES 
+    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
+    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
+    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
+    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
+    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
+    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
+    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
 
-    Route::get('/categories', 'CategoriesController@index')->name('admin.categories.list');
-    Route::get('/categories/create', 'CategoriesController@create')->name('admin.categories.create');
-    Route::post('/categories/create', 'CategoriesController@store')->name('admin.categories.store');
-    Route::get('/categories/edit/{categories_id}', 'CategoriesController@edit')->name('admin.categories.edit');
-    Route::post('/categories/update/{categories_id}', 'CategoriesController@update')->name('admin.categories.update');
-    Route::get('/categories/delete/{categories_id}', 'CategoriesController@delete')->name('admin.categories.delete');
-   
+    //CATEGORIES  ROUTES 
+    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
+    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
+    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
+    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
+    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
+    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
+    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
+
+
+}); 
+
+//FRONTEND ROUTES 
+
+
+
+
+
+
+//ADMIN THEME 
+
+Route::prefix('administrator')->group(function(){
+
+
+Route::get('/','Backend\MainController@MainPage');
+
+
+    //CATEGORIES  ROUTES 
+    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
+    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
+    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
+    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
+    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
+    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
+    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
+
+
 
 });
-
-
-
-

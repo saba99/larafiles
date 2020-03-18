@@ -1,6 +1,6 @@
-@extends('admin.layouts.admin')
+@extends('admin.layout.master')
 
-
+{{--@extends('admin.layouts.admin')--}}
 
 @section('ionicons')
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>

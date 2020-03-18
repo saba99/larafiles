@@ -14,6 +14,7 @@
       
         <a href="{{route('admin.payments.delete',$payment->id)}}">
 <ion-icon name="trash-outline"></ion-icon>
+<button type="submit" class="btn btn-danger">حذف</button>
     </a>
    
 

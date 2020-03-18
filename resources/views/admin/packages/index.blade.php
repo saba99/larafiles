@@ -1,4 +1,6 @@
-@extends('admin.layouts.admin')
+{{--@extends('admin.layouts.admin')--}}
+
+@extends('admin.layout.master') 
 
 
 @section('ionicons')
@@ -6,10 +8,21 @@
 @endsection
 
 @section('content')
-
+<div class="content-wrapper">
+  <div class="content">
 @include('admin.users.notification')
 
+<style>
+  body{
+    direction: rtl;
+  }
+
+</style>
+
+
 @if($packages && count($packages)>0)
+<div class="box-body">
+<div class="table-responsive border border-dark">
 <table class="table table-bordered">
 
 <thead>
@@ -24,5 +37,8 @@
 @endforeach
 </table>
 @endif
-
+</div>
+</div>
+</div>
+</div> 
 @endsection
