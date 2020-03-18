@@ -7,7 +7,7 @@
      <link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap-rtl.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/admin-custom.css')}}">
-  
+  <link rel="stylesheet" href="{{asset('assets/css/select2.min.css')}}">
 
   @yield('ionicons')
     <title>laravel Admin Panel</title>
@@ -41,6 +41,9 @@
 <script src="{{asset('assets/js/vendor/jquery/jquery-1.12.3.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery/popper.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery/uikit.min.js')}}"></script>
-<script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>    
+ 
+<script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script> 
+  <script src="{{asset('assets/js/select2.min.js')}}"></script> 
+   <script src="{{asset('assets/js/custom-admin.js')}}"></script> 
 </body>
 </html>

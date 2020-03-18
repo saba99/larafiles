@@ -14,7 +14,9 @@ class UsersController extends Controller
 {
    public function index(){
       
-
+         /* $user=User::find(5);
+            dd($user->packages()->get());
+          $user->packages()->sync([1=>['amount'=>12000]]);*/
       $users=User::all();
     return view('admin.users.index')->with(['panel_title'=>'لیست کاربران','users'=>$users]);
    }
@@ -104,6 +106,28 @@ class UsersController extends Controller
         $userItem->update($inputs);
 
       return redirect()->route('admin.users.list')->with('success', 'کاربر جدید با موفقیت ویرایش اضافه شد');
+
+
+   } 
+
+   public function packages(Request $request,$user_id){
+
+                 ($user=User::find($user_id));
+                 //dd($user);
+                 if(!$user){
+                     
+
+                  return redirect()->back();
+
+                 }
+
+           ($user_packages=$user->packages()->get());
+
+              //dd($user_packages);
+
+            ($user=User::with('packages')->get());
+
+      return view('admin.users.packages',compact(['user_packages']))->with('panel_title','نمایش لیست پکیج های کاربر');
 
 
    }

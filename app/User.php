@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Models\Payment;
+use App\Models\Subscribe;
+use App\Models\Package;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -48,7 +50,15 @@ class User extends Authenticatable
     public function payments(){
 
         return $this->hasMany(Payment::class);
+    }  
 
+    public function subscribes(){
 
+        return $this->hasMany(Subscribe::class);  
+    }  
+
+    public function packages(){
+
+        return $this->belongsToMany(Package::class,'user_packages')->withPivot(['amount']);
     }
 }

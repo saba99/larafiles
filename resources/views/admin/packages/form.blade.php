@@ -19,6 +19,19 @@
    
    <input type="text" class="form-control" name="package_price"  value="{{old('package_price',isset($packageItem) ? $packegeItem->package_price : '')}}">
 </div>  
+<div class="form-group">
+
+   <lable for="package_price">دسته بندی ها:</lable>
+  
+   <select name="categories[]" class="select2 form-control" id="categories" multiple>
+ @foreach($categories as $category)
+
+<option value={{$category->id}}>{{$category->name}}</option>
+
+@endforeach
+</select>
+
+</div>  
 
  <div class="form-group">
    
@@ -30,4 +43,4 @@
 </div>
 
 
-</form>
+</form> 

@@ -10,6 +10,8 @@
    <td>{{$user->name}}</td>
     <td>{{$user->email}}</td>
     <td>{{$user->wallet}}</td>
+    <td>{{$user->packages()->count()}}</td>
+    
     <td class="text-center">
         @include('admin.users.operations')
     </td>

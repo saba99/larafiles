@@ -13,11 +13,17 @@ class UserPackages extends Migration
      */
     public function up()
     {
-        Schema::create('user_packages', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('user_packages', function (Blueprint $table) { 
+            
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('package_id');
+
+            $table->primary(['user_id', 'package_id']);
+            
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+         
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
-            $table->integer('user_package_amount');
+            $table->integer('amount');
 
             
             $table->timestamps();
