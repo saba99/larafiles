@@ -10,16 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::resource('/', 'Frontend\HomeController');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 
 Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
+
+    //MAIN PAGE 
+    Route::get('/', 'MainController@MainPage');
 
      //USERS ROUTES
     Route::get('/users','UsersController@index')->name('admin.users.list');
@@ -87,32 +86,29 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
     Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
 
 
-}); 
-
-//FRONTEND ROUTES 
+});
 
 
 
 
+//FRONTEND ROUTES
+Route::resource('/', 'Frontend\HomeController');
 
+Route::get('/home', 'HomeController@index')->name('home');
 
-//ADMIN THEME 
+Route::get('/homePage', 'Frontend\HomeController@create')->name('homePage');
 
-Route::prefix('administrator')->group(function(){
+Route::group(['namespace'=>'Frontend'], function () {
 
+    //SUBSCRIBE
+    Route::get('/plans', 'PlansController@index')->name('frontend.plans.index');
+    Route::get('/subscribe/{plan_id}', 'SubscribesController@index')->name('frontend.subscribes.index');
+    Route::post('/subscribe/{plan_id}', 'SubscribesController@register')->name('frontend.subscribes.register');
 
-Route::get('/','Backend\MainController@MainPage');
+    //FILES
+    Route::get('file/{file_id}','FilesController@details')->name('frontend.files.details');
 
-
-    //CATEGORIES  ROUTES 
-    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
-    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
-    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
-    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
-    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
-    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
-    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
-
+    Route::get('file/download/{file_id}', 'FilesController@download')->name('frontend.files.download');
 
 
 });

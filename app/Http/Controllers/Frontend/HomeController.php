@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Files;
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,8 +25,14 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $files=Files::all();
+       // dd($files);
+
+        $packages=Package::all();
+        ($package_file=Package::with('files')->get()->pluck('id')->toArray());
+        
+        return view('frontend.home.homepage',compact(['files','packages', 'package_file']));
     }
 
     /**

@@ -30,5 +30,20 @@ class Files extends Model
 
 
         return $this->morphToMany(Category::class, 'categorizable');
-    }
+    }  
+
+    /*public function getFileTypeAttributes(){
+
+
+        $types=[
+
+            'application/pdf'=>'PDF',
+            'image/png'=>'PNG',
+              'image/jpeg'=>'JPEG',
+
+        ];
+        return $types[$this->attributes['file_type']];
+         //return $this->attributes['file_type'] = $types($value);   
+
+    }*/
 }
