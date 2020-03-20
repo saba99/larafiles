@@ -82,9 +82,11 @@ class FilesController extends Controller
         $file->file_title = $request->file_title;
         $file->file_description = $request->file_description;
         $file->file_type = $cover->getClientMimeType();
+
+        $file->original_filename = $cover->getClientOriginalName();
+        $file->file_name = $cover->getFilename() . '.' . $extension;
         $file->file_size= $cover->getClientSize();
-        ($file->file_name = $cover->getClientOriginalName());
-        //($file->filename = $cover->getFilename() . '.' . $extension);
+        
         if($file->save()){
 
             return redirect()->route('admin.files.list')->with('success', 'فایل جدید با موفقیت ذخیره شد ');

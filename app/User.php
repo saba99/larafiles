@@ -5,6 +5,7 @@ namespace App;
 use App\Models\Payment;
 use App\Models\Subscribe;
 use App\Models\Package;
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -60,5 +61,11 @@ class User extends Authenticatable
     public function packages(){
 
         return $this->belongsToMany(Package::class,'user_packages')->withPivot(['amount']);
+    } 
+
+    public function CurrentSubscribe(){
+
+
+       return $this->subscribes()->where('subscribe_expired_at','>=',Carbon::now()); 
     }
 }

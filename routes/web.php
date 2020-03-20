@@ -110,5 +110,10 @@ Route::group(['namespace'=>'Frontend'], function () {
 
     Route::get('file/download/{file_id}', 'FilesController@download')->name('frontend.files.download');
 
+    Route::get('/access','FilesController@access')->name('frontend.files.access');
+
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

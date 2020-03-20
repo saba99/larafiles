@@ -40,18 +40,22 @@ if(!$plan){
 return redirect()->back()->with('planErr','طرح مورد نظر شما معتبر نمی باشد ');
 }
 $plans_days_count=$plan->plans_days_count;
-$expired_at=Carbon::now()->addDays($plans_days_count);
+$expired_at=Carbon::now();
+
+$expired_at->addDays($plans_days_count);
 $subscribeData=[
 
 'user_id'=>Auth::user()->id,
 'plan_id'=>$plan_id,
 'subscribe_limit_download'=>$plan->plan_limit_download_count,
 'created_at'=>Carbon::now(),
-'subscribe_expired_at'=>$expired_at
+'subscribe_expired_at'=>$expired_at->format('Y-m-d H:i:s')
 
 ];
 
 Subscribe::create($subscribeData);
+
+
 
 }
 

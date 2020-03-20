@@ -30,10 +30,16 @@
         خرید فایل
     </div>
     <div class="card-body">
+       @if(session('FileErr'))
+
+               <div class="alert alert-danger">
+                   <p>{{session('FileErr')}}</p>
+               </div>
+              @endif
         
          @if(App\Utility\User::is_user_subscribed($current_user))
 
-                <a href="">دانلود فایل</a>
+                <a href="{{route('frontend.files.download',[$file_item->id])}}">دانلود فایل</a>
         
          @else 
         <a href="{{route('frontend.subscribes.index',$file_item->id)}}" class="btn btn-success btn-block">خرید این فایل</a>
