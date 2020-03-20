@@ -6,12 +6,28 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\UserRequest;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 
 
 class UsersController extends Controller
 {
+
+
+
+   /*public function __construct()
+   {
+
+      if (!Auth::check()) {
+       
+
+         Redirect::to('homePage')->send();
+         
+      }
+   }  */
+
    public function index(){
       
          /* $user=User::find(5);

@@ -15,7 +15,7 @@ Auth::routes();
 
 
 
-Route::group(['prefix'=>'admin','namespace'=>'Backend'],function(){
+Route::group(['prefix'=>'admin','namespace'=>'Backend','middleware'=>'admin'],function(){
 
     //MAIN PAGE 
     Route::get('/', 'MainController@MainPage');
@@ -110,7 +110,20 @@ Route::group(['namespace'=>'Frontend'], function () {
 
     Route::get('file/download/{file_id}', 'FilesController@download')->name('frontend.files.download');
 
-    Route::get('/access','FilesController@access')->name('frontend.files.access');
+    Route::get('/access','FilesController@access')->name('frontend.files.access'); 
+
+
+    //USERS AUTH 
+
+    Route::get('account/login','UsersController@login')->name('account.login');
+    Route::post('account/login', 'UsersController@doLogin')->name('account.post.login');
+    Route::get('account/register', 'UsersController@register')->name('account.register');
+    Route::post('account/register', 'UsersController@doRegister')->name('account.post.register');
+    Route::get('account/logout', 'UsersController@logout')->name('account.logout');
+
+    //USERS DASHBOARD
+
+    Route::get('/dashboard','DashboardController@index')->name('user.dashboard');
 
 
 });

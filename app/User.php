@@ -11,7 +11,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
-{
+{    
+
+    const USER=1;
+
+    const ADMIN=2;
+    
     use Notifiable;
 
     /**
