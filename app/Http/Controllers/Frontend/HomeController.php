@@ -16,7 +16,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home.index');
+        $files = Files::all();
+        // dd($files);
+
+        $packages = Package::all();
+
+        ($package_user=Package::with('users')->get()->toArray());
+                     
+              
+        ($package_file = Package::with('files')->get()->pluck('id')->toArray());
+
+       ($latestPackages = Package::orderby('created_at', 'desc')->get());
+                 
+        ($file  = Files::pluck('file_name', 'id')->first());
+
+        return view('frontend.home.index',compact(['files','packages', 'package_file', 'package_user', 'latestPackages']));
     }
 
     /**

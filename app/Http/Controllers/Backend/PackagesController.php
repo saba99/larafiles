@@ -34,6 +34,8 @@ class PackagesController extends Controller
             'package_title' => $request->input('package_title'),
             
             'package_price' => $request->input('package_price'),
+
+              'package_description'=> $request->input('package_description')
             
 
         ]);
@@ -124,6 +126,7 @@ class PackagesController extends Controller
 
                'package_title'=>$request->input('package_title'),
                'package_price'=>$request->input('package_price'),
+                    'package_description' => $request->input('package_description')
            ]); 
 
      if($request->has('categories')){

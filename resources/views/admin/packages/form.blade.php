@@ -19,6 +19,12 @@
    
    <input type="text" class="form-control" name="package_price"  value="{{old('package_price',isset($packageItem) ? $packegeItem->package_price : '')}}">
 </div>  
+ <div class="form-group">
+
+   <lable for="package_description">توضیحات:</lable>
+   
+   <input type="text" class="form-control" name="package_description"  value="{{old('package_price',isset($packageItem) ? $packegeItem->package_description : '')}}">
+</div>
 <div class="form-group">
 
    <lable for="package_price">دسته بندی ها:</lable>

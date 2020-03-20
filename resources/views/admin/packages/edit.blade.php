@@ -22,18 +22,23 @@
 
     <div class="form-group">
 
-   <lable for="packege_title">عنوان پکیج :</lable>
+   <lable for="package_title">عنوان پکیج :</lable>
    
-   <input type="text" class="form-control" name="packege_title"  value="{{old('packege_title',isset($packegeItem) ? $packegeItem->packege_title : '')}}">
+   <input type="text" class="form-control" name="package_title"  value="{{old('package_title',isset($packegeItem) ? $packegeItem->package_title : '')}}">
 </div>  
  
  <div class="form-group">
 
-   <lable for="packege_price">قیمت:</lable>
+   <lable for="package_price">قیمت:</lable>
    
-   <input type="text" class="form-control" name="packege_price"  value="{{old('packege_price',isset($packegeItem) ? $packegeItem->packege_price : '')}}">
+   <input type="text" class="form-control" name="package_price"  value="{{old('package_price',isset($packegeItem) ? $packegeItem->package_price : '')}}">
 </div>  
+<div class="form-group">
 
+   <lable for="package_description">توضیحات:</lable>
+   
+   <input type="text" class="form-control" name="package_description"  value="{{old('package_description',isset($packegeItem) ? $packegeItem->package_description : '')}}">
+</div> 
 <div class="form-group">
 
    <lable for="package_price">دسته بندی ها:</lable>

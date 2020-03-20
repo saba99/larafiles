@@ -124,6 +124,11 @@ Route::group(['namespace'=>'Frontend'], function () {
     //USERS DASHBOARD
 
     Route::get('/dashboard','DashboardController@index')->name('user.dashboard');
+    Route::get('/profile', 'UsersController@profile')->name('user.profile'); 
+
+
+    //PACKAGES 
+    Route::get('/package-details','PackagesController@details')->name('frontend.packages.details');
 
 
 });

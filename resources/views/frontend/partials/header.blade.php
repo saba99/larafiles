@@ -338,7 +338,7 @@
                             </div>
                             <div class="autor__info">
                                 <p class="name">
-                                    رضا رضایی
+                                   صبا حصارکی
                                 </p>
                                 <!--<p class="ammount">2000 تومان</p>-->
                             </div>
@@ -346,7 +346,7 @@
                             <div class="dropdowns dropdown--author">
                                 <ul>
                                     <li>
-                                        <a href="author.html">
+                                        <a href="{{route('user.profile')}}">
                                             <span class="lnr lnr-user"></span>پروفایل </a>
                                     </li>
                                     <li>
@@ -409,7 +409,7 @@
                                 </div>
                                 <div class="autor__info v_middle">
                                     <p class="name">
-                                        رضا رضایی
+                                       صبا حصارکی
                                     </p>
                                     <p class="ammount">2000 تومان</p>
                                 </div>
@@ -830,10 +830,10 @@
                                                             <a href="support-forum-detail.html">جزئیات انجمن</a>
                                                         </li>
                                                         <li>
-                                                            <a href="login.html">ورود </a>
+                                                            <a href="{{route('account.login')}}">ورود </a>
                                                         </li>
                                                         <li>
-                                                            <a href="signup.html">ثبت نام </a>
+                                                            <a href="{{route('account.register')}}">ثبت نام </a>
                                                         </li>
                                                         <li>
                                                             <a href="recover-pass.html">بازیابی رمز عبور</a>

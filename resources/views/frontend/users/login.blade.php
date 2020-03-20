@@ -1,10 +1,10 @@
-@extends('frontend.layouts.frontend')
+{{-- @extends('frontend.layouts.frontend') --}}
 
-
+@extends('frontend.layout.master')
 @section('content')
 
 
-<div class="col-xs-12 col-md-12 mt-4">
+{{--<div class="col-xs-12 col-md-12 mt-4">
 
 
 <div class="card">
@@ -44,13 +44,101 @@
    
 </div>
 
+</div>--}}
+<!--================================
+    START BREADCRUMB AREA
+=================================-->
+<section class="breadcrumb-area dir-rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="index.html">خانه</a>
+                        </li>
+                        <li>
+                            <a href="dashboard.html">ورود </a>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="page-title">ورود </h1>
+            </div>
+            <!-- end /.col-md-12 -->
+        </div>
+        <!-- end /.row -->
+    </div>
+    <!-- end /.container -->
+</section>
+<!--================================
+    END BREADCRUMB AREA
+=================================-->
 
+<!--================================
+        START LOGIN AREA
+=================================-->
+<section class="login_area section--padding2 dir-rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <form method="post" action="{{route('account.post.login')}}">
+                  @csrf
+                    <div class="cardify login">
+                        <div class="login--header">
+                            <h3>خوش آمدید</h3>
+                            <p>شما می توانید با نام کاربری خود وارد شوید</p>
+                        </div>
+                        <!-- end .login_header -->
 
+                        <div class="login--form">
+                            {{-- <div class="form-group">
+                                <label for="user_name">نام کاربری</label>
+                                <input id="user_name" type="text" class="text_field" placeholder="">
+                            </div> --}}
+                             <div class="form-group">
+                        <label for="exampleInputEmail1">ایمیل</label>
+                              <input type="email"  name="email" class="text_field" id="exampleInputEmail1" aria-describedby="emailHelp" >
+  
+                                       </div>
+                            <div class="form-group">
+                                <label for="pass">کلمه عبور </label>
+                                <input id="pass" type="text" class="text_field" placeholder="">
+                            </div>
 
+                            <div class="form-group">
+                                <div class="custom_checkbox">
+                                    <input type="checkbox" name="remember" id="ch2">
+                                    <label for="ch2">
+                                        <span class="shadow_checkbox"></span>
+                                        <span class="label_text">مرا به خاطر بسپار </span>
+                                    </label>
+                                </div>
+                            </div>
 
+                            <button class="btn btn--md btn--round" type="submit">ورود </button>
 
-
-</div>
+                            <div class="login_assist">
+                                <p class="recover">
+                                    <a href="pass-recovery.html">نام کاربری </a> یا
+                                    <a href="pass-recovery.html">کلمه عبور </a> فراموش کرده اید ؟</p>
+                                <p class="signup">هنوز
+                                    <a href="{{route('account.register')}}">ثبت نام </a>  نکرده اید ؟</p>
+                            </div>
+                        </div>
+                        <!-- end .login--form -->
+                    </div>
+                    <!-- end .cardify -->
+                </form>
+            </div>
+            <!-- end .col-md-6 -->
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end .container -->
+</section>
+<!--================================
+        END LOGIN AREA
+=================================-->
 
 
 @endsection

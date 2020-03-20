@@ -10,7 +10,7 @@ use App\User;
 use App\Models\Category;
 class Package extends Model
 {   
-    protected $fillable=['package_title','package_price'];
+    protected $fillable=['package_title','package_price', 'package_description'];
 
 
 

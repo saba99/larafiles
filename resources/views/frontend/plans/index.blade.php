@@ -1,4 +1,6 @@
-@extends('frontend.layouts.frontend')
+ @extends('frontend.layouts.frontend')
+
+{{-- @extends('frontend.layout.master') --}}
 
 @section('content')
 

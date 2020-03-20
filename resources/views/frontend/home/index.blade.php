@@ -650,14 +650,15 @@ START PRODUCTS AREA
         <!-- start .row -->
         <div class="row">
             <!-- start .col-md-4 -->
-            <div class="col-lg-4 col-md-6">
-                <!-- start .single-product -->
-                <div class="product product--card">
-
+             @if($latestPackages && count($latestPackages)>0)
+             @foreach($latestPackages as $package)
+                <div class="product product--card mx-2" >
+                 
                     <div class="product__thumbnail">
+                         
                         <img src="assets/images/new/p1.jpg" alt="Product Image">
                         <div class="prod_btn">
-                            <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
+                            <a href="{{route('frontend.packages.details',$package->id)}}" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
                             <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
                         </div>
                         <!-- end /.prod_btn -->
@@ -666,13 +667,13 @@ START PRODUCTS AREA
 
                     <div class="product-desc">
                         <a href="single-product.html" class="product_title">
-                            <h4>قالب فروشگاهی </h4>
+                            <h4>{{$package->package_title}}</h4>
                         </a>
                         <ul class="titlebtm">
                             <li>
                                 <img class="auth-img" src="assets/images/auth.jpg" alt="author image">
-                                <p>
-                                    <a href="#">دامن دریا </a>
+                                <p>                     {{--{{$package->users[0]->name}}--}}
+                                    <a href="#"> </a>
                                 </p>
                             </li>
                             <li class="product_cat">
@@ -680,15 +681,13 @@ START PRODUCTS AREA
                                     <span class="lnr lnr-book"></span>افزونه </a>
                             </li>
                         </ul>
-
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
-                            است.</p>
+                            <p>{{$package->package_description}}</p>
                     </div>
                     <!-- end /.product-desc -->
 
                     <div class="product-purchase">
                         <div class="price_love">
-                            <span>10 تومان - 50 تومان</span>
+                            <span>{{$package->package_price}} تومان </span>
                             <p>
                                 <span class="lnr lnr-heart"></span> 90</p>
                         </div>
@@ -700,12 +699,21 @@ START PRODUCTS AREA
                         </div>
                     </div>
                     <!-- end /.product-purchase -->
-                </div>
+                </div> 
+                
+               @endforeach
+               @endif
+            <div class="col-lg-4 col-md-6">
+               
+                <!-- start .single-product -->
+               
                 <!-- end /.single-product -->
+               
             </div>
+             
             <!-- end /.col-md-4 -->
 
-            <!-- start .col-md-4 -->
+           {{-- <!-- start .col-md-4 -->
             <div class="col-lg-4 col-md-6">
                 <!-- start .single-product -->
                 <div class="product product--card">
@@ -1021,8 +1029,9 @@ START PRODUCTS AREA
                 </div>
                 <!-- end /.single-product -->
             </div>
-            <!-- end /.col-md-4 -->
+            <!-- end /.col-md-4 -->--}}
         </div>
+
         <!-- end /.row -->
 
         <!-- start .row -->

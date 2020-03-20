@@ -22,8 +22,10 @@ class UsersController extends Controller
         $newUserData=[
 
            'name'=>$request->input('name'),
+            
            'email'=>$request->input('email'),
-           'password'=>$request->input('password')
+           'password'=>$request->input('password'),
+           
 
         ];
 
@@ -49,7 +51,7 @@ class UsersController extends Controller
 
         if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')],$remember)){
 
-           return redirect('/home');
+           return redirect('/profile');
 
         }
          
@@ -62,6 +64,11 @@ class UsersController extends Controller
         Auth::logout();
 
         return redirect('/homePage');
+    } 
+
+    public function profile(){
+
+        return view('frontend.profile.index');
     }
     
 }
