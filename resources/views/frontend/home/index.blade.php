@@ -650,7 +650,7 @@ START PRODUCTS AREA
         <!-- start .row -->
         <div class="row">
             <!-- start .col-md-4 -->
-             @if($latestPackages && count($latestPackages)>0)
+            @if($latestPackages && count($latestPackages)>0)
              @foreach($latestPackages as $package)
                 <div class="product product--card mx-2" >
                  
@@ -673,7 +673,7 @@ START PRODUCTS AREA
                             <li>
                                 <img class="auth-img" src="assets/images/auth.jpg" alt="author image">
                                 <p>                     {{--{{$package->users[0]->name}}--}}
-                                    <a href="#"> </a>
+                                   <a href="#"> </a>
                                 </p>
                             </li>
                             <li class="product_cat">
@@ -711,8 +711,74 @@ START PRODUCTS AREA
                
             </div>
              
-            <!-- end /.col-md-4 -->
+            <!-- end /.col-md-4 -->--}}
 
+
+            {{--  --}}
+<div class="row">
+            <!-- start .col-md-4 -->
+             @if($latestFiles && count($latestFiles)>0)
+             @foreach($latestFiles as $file)
+                <div class="product product--card mx-2" >
+                 
+                    <div class="product__thumbnail">
+                         
+                        <img src="assets/images/new/p1.jpg" alt="Product Image">
+                        <div class="prod_btn">
+                            <a href="{{route('frontend.files.details',$file->id)}}" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
+                            <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
+                        </div>
+                        <!-- end /.prod_btn -->
+                    </div>
+                    <!-- end /.product__thumbnail -->
+
+                    <div class="product-desc">
+                        <a href="single-product.html" class="product_title">
+                            <h4>{{$file->file_title}}</h4>
+                        </a>
+                        <ul class="titlebtm">
+                            <li>
+                                <img class="auth-img" src="assets/images/auth.jpg" alt="author image">
+                                <p>                     {{--{{$package->users[0]->name}}--}}
+                                    <a href="#"> </a>
+                                </p>
+                            </li>
+                            <li class="product_cat">
+                                <a href="#">
+                                    <span class="lnr lnr-book"></span>افزونه </a>
+                            </li>
+                        </ul>
+                            <p>{{$file->file_description}}</p>
+                    </div>
+                    <!-- end /.product-desc -->
+
+                    <div class="product-purchase">
+                        <div class="price_love">
+                            <span>{{$file->file_price}} قیمت</span>
+                            <p>
+                                <span class="lnr lnr-heart"></span> 90</p>
+                        </div>
+                        <div class="sell">
+                            <p>
+                                <span class="lnr lnr-cart"></span>
+                                <span>16</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end /.product-purchase -->
+                </div> 
+                
+               @endforeach
+               @endif
+            <div class="col-lg-4 col-md-6">
+               
+                <!-- start .single-product -->
+               
+                <!-- end /.single-product -->
+               
+            </div>
+             
+            <!-- end /.col-md-4 -->
            {{-- <!-- start .col-md-4 -->
             <div class="col-lg-4 col-md-6">
                 <!-- start .single-product -->

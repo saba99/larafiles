@@ -15,9 +15,9 @@ if(!\App\utility\User::is_user_subscribed($user_id)){
 
     return false;
 }
-$userItem=User::findOrFail($user_id);
+($userItem=User::findOrFail($user_id));
 
-$userSubscribe=$userItem->currentSubscribe()->first();
+($userSubscribe=$userItem->currentSubscribe()->first());
 
 if(!$userSubscribe){
 

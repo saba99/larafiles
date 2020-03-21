@@ -27,10 +27,11 @@ class HomeController extends Controller
         ($package_file = Package::with('files')->get()->pluck('id')->toArray());
 
        ($latestPackages = Package::orderby('created_at', 'desc')->get());
+        $latestFiles=Files::orderby('created_at', 'desc')->get();
                  
         ($file  = Files::pluck('file_name', 'id')->first());
 
-        return view('frontend.home.index',compact(['files','packages', 'package_file', 'package_user', 'latestPackages']));
+        return view('frontend.home.index',compact(['files','packages', 'latestFiles', 'package_file', 'package_user', 'latestPackages']));
     }
 
     /**

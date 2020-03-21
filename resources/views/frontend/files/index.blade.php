@@ -55,12 +55,6 @@
                                 <img src="/assets/images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
                             </div>
                             <div class="prev-slide">
-                                <img src="/assets/assets/images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
-                            </div>
-                            <div class="prev-slide">
-                                <img src="/assets/assets/images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
-                            </div>
-                            <div class="prev-slide">
                                 <img src="/assets/images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
                             </div>
                             <div class="prev-slide">
@@ -74,6 +68,12 @@
                             </div>
                             <div class="prev-slide">
                                 <img src="/assets/images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
+                            </div>
+                            <div class="prev-slide">
+                                <img src="images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
+                            </div>
+                            <div class="prev-slide">
+                                <img src="images/new/itprv.jpg" alt="Keep calm this isn't the end of the world, the preview is just missing.">
                             </div>
                         </div>
                         <!-- end /.item--preview-slider -->
@@ -109,7 +109,7 @@
                                         <img src="/assets/images/new/thumb4.jpg" alt="This is the thumbnail of the item">
                                     </div>
                                     <div class="item-thumb">
-                                        <img src="/assets/images/new/thumb5.jpg" alt="This is the thumbnail of the item">
+                                        <img src="images/new/thumb5.jpg" alt="This is the thumbnail of the item">
                                     </div>
                                 </div>
                                 <!-- end /.thumb-slider -->
@@ -1093,17 +1093,18 @@
                                 </li>
                             </ul>
                             <!-- end /.pricing-options -->
-                                   @if(App\Utility\User::is_user_subscribed($current_user))
+                               
+
+                       @if(App\Utility\User::is_user_subscribed($current_user))
                             <div class="purchase-button">
-                                
-                                <a href="{{route('frontend.packages.download',[$package_item->id])}}" class="btn btn--lg btn--round">دانلود فایل</a>
+                                <a href="{{route('frontend.files.download',[$file_item->id])}}" class="btn btn--lg btn--round">دانلود این فایل</a>
                                 @else
-                                <a href="{{route('frontend.subscribes.index',[$package_item->id])}}" class="btn btn--lg btn--round cart-btn">
-                                    <span class="lnr lnr-cart"></span> افودن به سبد خرید </a>
+                                <a href="{{route('frontend.subscribes.index',$file_item->id)}}" class="btn btn--lg btn--round cart-btn">
+                                    <span class="lnr lnr-cart"></span>هم اکنون بخرید </a>
+                                    
                             </div>
-                            @endif
                             <!-- end /.purchase-button -->
-                        </div>
+                        </div>@endif
                         <!-- end /.sidebar--card -->
 
                         <div class="sidebar-card card--metadata">
@@ -1158,36 +1159,25 @@
                             <ul class="infos">
                                 <li>
                                     <p class="data-label">منتشر شده</p>
-                                    <p class="info">{{$package_item->created_at}}</p>
+                                    <p class="info">{{$file_item->created_at}}</p>
                                 </li>
                                 <li>
                                     <p class="data-label">به روز رسانی</p>
-                                    <p class="info">{{$package_item->updated_at}}</p>
+                                    <p class="info">{{$file_item->updated_at}}</p>
                                 </li>
                                 <li>
                                     <p class="data-label">توضیحات</p>
-                                    <p class="info">{{$package_item->package_description}}</p>
+                                    <p class="info">{{$file_item->file_description}}</p>
                                 </li>
                                 <li>
                                     <p class="data-label">دسته بندی </p>
-                                    <p class="info">وردپرس</p>
+                                    <p class="info"></p>
                                 </li>
-                                <li>
-                                    <p class="data-label">طرح </p>
-                                    <p class="info">ریسپانسیو</p>
+                                
+                                    <p class="data-label">نوع فایل</p>
+                                    <p class="info">{{$file_item->file_type}}</p>
                                 </li>
-                                <li>
-                                    <p class="data-label">فایل ها شامل</p>
-                                    <p class="info">Html, CSS, JavaScript</p>
-                                </li>
-                                <li>
-                                    <p class="data-label">مرورگر</p>
-                                    <p class="info">IE10, IE11, Firefox, Safari, Opera, Chrome5</p>
-                                </li>
-                                <li>
-                                    <p class="data-label">بوت استرپ</p>
-                                    <p class="info">نسخه 4</p>
-                                </li>
+                               
                                 <li>
                                     <p class="data-label">برچسب ها
                                          
@@ -1209,7 +1199,7 @@
 
                             <div class="author-infos">
                                 <div class="author_avatar">
-                                    <img src="assets/images/new/author-avatar.jpg" alt="Presenting the broken author avatar :D">
+                                    <img src="/assets/images/new/author-avatar.jpg" alt="Presenting the broken author avatar :D">
                                 </div>
 
                                 <div class="author">
@@ -1285,7 +1275,7 @@
                     <div class="product product--card product--card2">
 
                         <div class="product__thumbnail">
-                            <img src="assets/images/new/p1.jpg" alt="Product Image">
+                            <img src="/assets/images/new/p1.jpg" alt="Product Image">
                             <div class="prod_btn">
                                 <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر </a>
                                 <a href="single-product.html" class="transparent btn--sm btn--round">مشاهده </a>
@@ -1353,7 +1343,7 @@
                     <div class="product product--card product--card2">
 
                         <div class="product__thumbnail">
-                            <img src="assets/images/new/p1.jpg" alt="Product Image">
+                            <img src="/assets/images/new/p1.jpg" alt="Product Image">
                             <div class="prod_btn">
                                 <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر </a>
                                 <a href="single-product.html" class="transparent btn--sm btn--round">مشاهده </a>
@@ -1421,7 +1411,7 @@
                     <div class="product product--card product--card2">
 
                         <div class="product__thumbnail">
-                            <img src="assets/images/new/p1.jpg" alt="Product Image">
+                            <img src="/assets/images/new/p1.jpg" alt="Product Image">
                             <div class="prod_btn">
                                 <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر </a>
                                 <a href="single-product.html" class="transparent btn--sm btn--round">مشاهده </a>
@@ -1498,7 +1488,7 @@
     =================================-->
     <section class="call-to-action bgimage dir-rtl">
         <div class="bg_image_holder">
-            <img src="/assets/images/new/calltobg.jpg" alt="">
+            <img src="assets/images/new/calltobg.jpg" alt="">
         </div>
         <div class="container content_above">
             <div class="row">

@@ -21,7 +21,8 @@ class FilesController extends Controller
         /*($package_file = Package::with('files')->get());
         dd($package_file);*/
         $current_user = Auth::user()->id;
-     return view('frontend.files.single',compact(['file_item','package_file', 'current_user']));
+     //return view('frontend.files.single',compact(['file_item','package_file', 'current_user']));
+      return view('frontend.files.index', compact(['file_item', 'package_file', 'current_user']));
 
     } 
 

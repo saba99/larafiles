@@ -128,7 +128,8 @@ Route::group(['namespace'=>'Frontend'], function () {
 
 
     //PACKAGES 
-    Route::get('/package-details','PackagesController@details')->name('frontend.packages.details');
+    Route::get('/package-details/{package_id}','PackagesController@details')->name('frontend.packages.details');
+    Route::get('/package/download/{package_id}', 'PackagesController@download')->name('frontend.packages.download');
 
 
 });
