@@ -107,10 +107,13 @@ Route::group(['namespace'=>'Frontend'], function () {
 
     //FILES
     Route::get('file/{file_id}','FilesController@details')->name('frontend.files.details');
-
+    
+    Route::get('fileSingle/{file_id}', 'FilesController@single')->name('frontend.files.single');
     Route::get('file/download/{file_id}', 'FilesController@download')->name('frontend.files.download');
 
-    Route::get('/access','FilesController@access')->name('frontend.files.access'); 
+    Route::get('/access','FilesController@access')->name('frontend.files.access');
+
+    Route::post('/file/report', 'FilesController@report')->name('frontend.files.report');
 
 
     //USERS AUTH 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-rtl.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/frontend-custom.css')}}">
-
+    <meta name="csrf-token" content="{{csrf_token()}}">
 </head>
 <body>
     
@@ -29,6 +29,8 @@
 <script src="{{asset('assets/js/vendor/jquery/popper.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery/uikit.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/sweetalert.min.js')}}"></script>
+
 <script src="{{asset('assets/js/vendor/chart.bundle.min.js')}}"></script>
 <script src="{{asset('assets/js/custom-frontend.js')}}"></script>
 </body>

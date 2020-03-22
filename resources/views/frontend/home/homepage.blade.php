@@ -14,7 +14,7 @@
   @foreach($files as $file)
 
     <li>
-        <a href="">{{$file->file_title}}</a>
+        <a href="{{route('frontend.files.single',$file->id)}}">{{$file->file_title}}</a>
         </li>  
 
       @endforeach

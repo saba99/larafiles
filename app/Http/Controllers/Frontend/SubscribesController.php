@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\UserSubscribed;
 use App\Models\Plan;
 use App\Models\Subscribe;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 
 class SubscribesController extends Controller
@@ -19,11 +21,11 @@ public function index(Request $request,$plan_id){
   
 ($plan=Plan::findOrFail($plan_id));
 
-//dd($subscribe=Subscribe::with('plans')->whereId($plan_id)->get());
+        //dd($subscribe=Subscribe::with('plans')->whereId($plan_id)->get());
 
 
-
-return view('frontend.subscribes.index',compact(['plan']));
+        return view('frontend.subscribes.cart', compact(['plan']));
+//return view('frontend.subscribes.index',compact(['plan']));
 
 } 
 
@@ -43,9 +45,13 @@ $plans_days_count=$plan->plans_days_count;
 $expired_at=Carbon::now();
 
 $expired_at->addDays($plans_days_count);
+
+($user=Auth::user()->id);
 $subscribeData=[
 
-'user_id'=>Auth::user()->id,
+//'user_id'=>$user->id,
+'user_id'=> Auth::user()->id,
+//'user_id'=>3,
 'plan_id'=>$plan_id,
 'subscribe_limit_download'=>$plan->plan_limit_download_count,
 'created_at'=>Carbon::now(),
@@ -53,7 +59,13 @@ $subscribeData=[
 
 ];
 
-Subscribe::create($subscribeData);
+$subscribe=Subscribe::create($subscribeData);
+
+($email= new UserSubscribed($subscribe));
+
+Mail::to($user)->send($email);
+
+
 
 
 

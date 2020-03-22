@@ -39,8 +39,9 @@
         
          @if(App\Utility\User::is_user_subscribed($current_user))
 
-                <a href="{{route('frontend.files.download',[$file_item->id])}}">دانلود فایل</a>
-        
+                <a   class="btn btn-primary btn-block" href="{{route('frontend.files.download',[$file_item->id])}}">دانلود فایل</a>
+               <a  data-fid="{{$file_item->id}}" class="btn btn-warning btn-block btn_report_file">گزارش خطا </a>
+
          @else 
         <a href="{{route('frontend.subscribes.index',$file_item->id)}}" class="btn btn-success btn-block">خرید این فایل</a>
         

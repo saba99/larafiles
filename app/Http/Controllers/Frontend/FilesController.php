@@ -24,8 +24,18 @@ class FilesController extends Controller
      //return view('frontend.files.single',compact(['file_item','package_file', 'current_user']));
       return view('frontend.files.index', compact(['file_item', 'package_file', 'current_user']));
 
-    } 
+    }
+   public function single(Request $request, int $file_id)
+   {
 
+      $file_item = Files::findOrFail($file_id);
+      //dd($file_item);
+      /*($package_file = Package::with('files')->get());
+        dd($package_file);*/
+      $current_user = Auth::user()->id;
+      return view('frontend.files.single',compact(['file_item','package_file', 'current_user']));
+      
+   }
     public function download(Request $request,$file_id){
       
 
@@ -65,5 +75,36 @@ class FilesController extends Controller
     public function access(){
 
         return view('frontend.files.access');
+    } 
+
+    public function report(Request $request){
+
+      $file_id=($request->input('file_id'));
+
+
+      if($file_id && intval($file_id)>0){
+
+          
+        $fileItem=Files::findOrFail($file_id);
+
+        $fileItem->increment('file_report_count');
+
+
+        return [
+
+           'success'=>true,
+           'message'=>'درخواست شما با موفقیت ثبت گردید '
+        ];
+     
+
+
+      }
+
+      return [
+
+         'success' => false,
+         'message' => 'درخواست شما معتبر نمی باشد  '
+      ];
+
     }
 }
