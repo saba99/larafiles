@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MartPlace - Complete Online Multipurpose Marketplace HTML Template">
     <meta name="keywords" content="marketplace, easy digital download, digital product, digital, html5">
-
+    <meta name="csrf-token" content="{{csrf_token()}}">
 
     <title>دریا </title>
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/trumbowyg.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    
     <!-- endinject -->
 
     <!-- Favicon -->
@@ -65,6 +66,8 @@ END FOOTER AREA
 <script src="{{asset('assets/js/vendor/jquery.countdown.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery.easing1.3.js')}}"></script>
+<script src="{{asset('assets/js/sweetalert.min.js')}}"></script>
+<script src="{{asset('assets/js/custom-frontend.js')}}"></script>
 <script src="{{asset('assets/js/vendor/owl.carousel.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/slick.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/tether.min.js')}}"></script>

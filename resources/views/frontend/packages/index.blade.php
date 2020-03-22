@@ -1097,9 +1097,10 @@
                             <div class="purchase-button">
                                 
                                 <a href="{{route('frontend.packages.download',[$package_item->id])}}" class="btn btn--lg btn--round">دانلود فایل</a>
+                                  <a  data-fid="{{$package_item->id}}" class=" btn-warning btn btn--lg btn--round btn_report_file">گزارش خطا </a>
                                 @else
                                 <a href="{{route('frontend.subscribes.index',[$package_item->id])}}" class="btn btn--lg btn--round cart-btn">
-                                    <span class="lnr lnr-cart"></span> افودن به سبد خرید </a>
+                                    <span class="lnr lnr-cart"></span> افزودن به سبد خرید  </a>
                             </div>
                             @endif
                             <!-- end /.purchase-button -->

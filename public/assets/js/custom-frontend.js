@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
     event.preventDefault();
 
     var $this=$(this);
-   var file_id=$this.data('fid');
+    var file_id=$this.data('fid');
 
         $.ajaxSetup({
             headers: {
@@ -20,6 +20,7 @@ jQuery(document).ready(function(){
 
 
         url:'/file/report',
+        //url:'/package/report',
         type:'post',
         dataType:'json',
         data:{

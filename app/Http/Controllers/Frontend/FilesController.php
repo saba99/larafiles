@@ -33,19 +33,20 @@ class FilesController extends Controller
       /*($package_file = Package::with('files')->get());
         dd($package_file);*/
       $current_user = Auth::user()->id;
+      //dd($current_user);
       return view('frontend.files.single',compact(['file_item','package_file', 'current_user']));
       
    }
     public function download(Request $request,$file_id){
       
 
-         $user=Auth::user()->id;
+         $current_user=Auth::user();
          /*if(!User::is_user_subscribed($user)){
 
             // abort(404);
             return redirect('frontend.files.access');
          }*/ 
-         if(!\App\utility\File::user_can_download($user)){
+         if(!\App\utility\File::user_can_download($current_user->id)){
 
             return redirect('frontend.files.access');
 
@@ -68,6 +69,10 @@ class FilesController extends Controller
     ($basePath = storage_path('app/public/'));
 
   ($filePath=$basePath.$file_item->file_name);
+
+  $current_user->CurrentSubscribe()->increment('subscribe_limit_download_count');
+
+  $file_item->increment('file_download_count');
 
         return response()->download($filePath);
     }  

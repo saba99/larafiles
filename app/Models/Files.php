@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Package;
 
-use App\Traits\Categorizable; 
+use App\Traits\Categorizable;
+use Carbon\Carbon;
 
 class Files extends Model
 {   
@@ -30,7 +31,16 @@ class Files extends Model
 
 
         return $this->morphToMany(Category::class, 'categorizable');
-    }  
+    }
+
+    protected  $uploads = '/storage/';
+
+
+    public function  getFile_NameAttributes($photo)
+    {
+
+        return $this->uploads . $photo;
+    }
 
     /*public function getFileTypeAttributes(){
 
@@ -46,4 +56,16 @@ class Files extends Model
          //return $this->attributes['file_type'] = $types($value);   
 
     }*/
+
+    public function scopePopular($query){
+
+      return  $query->orderBy('file_download_count','desc');
+
+    }
+
+    public function updateDownloadCounts()
+    { 
+
+        $isDownloadExistsForToday=FileDownload::where('file_id',$this->file_id)->where('created_at',Carbon::today());
+    }
 }

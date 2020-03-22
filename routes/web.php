@@ -15,10 +15,15 @@ Auth::routes();
 
 
 
-Route::group(['prefix'=>'admin','namespace'=>'Backend','middleware'=>'admin'],function(){
+Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'admin'],function(){
 
     //MAIN PAGE 
     Route::get('/', 'MainController@MainPage');
+
+    //DASHBOARD 
+
+    Route::get('/', 'DashboardController@index')->name('admin.dashboard');
+
 
      //USERS ROUTES
     Route::get('/users','UsersController@index')->name('admin.users.list');
@@ -92,6 +97,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Backend','middleware'=>'admin'],fu
 
 
 //FRONTEND ROUTES
+Route::get('/', 'Frontend\HomeController@details');
 Route::resource('/', 'Frontend\HomeController');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -132,7 +138,18 @@ Route::group(['namespace'=>'Frontend'], function () {
 
     //PACKAGES 
     Route::get('/package-details/{package_id}','PackagesController@details')->name('frontend.packages.details');
+    Route::get('/package-single/{package_id}', 'PackagesController@singlePackage')->name('frontend.packages.single');
     Route::get('/package/download/{package_id}', 'PackagesController@download')->name('frontend.packages.download');
+    Route::post('/package/report', 'PackagesController@report')->name('frontend.packages.report');
+
+    //CATEGORIES 
+     Route::get('/categories/{cat_id?}','CategoriesController@index')->name('frontend.categories');
+    Route::get('/categories/{category_id?}', 'CategoriesController@item')->name('frontend.categories.item');
+    
+
+
+
+
 
 
 });

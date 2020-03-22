@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
+use function GuzzleHttp\Promise\queue;
 
 class SubscribesController extends Controller
 {
@@ -46,12 +47,13 @@ $expired_at=Carbon::now();
 
 $expired_at->addDays($plans_days_count);
 
-($user=Auth::user()->id);
+//($user=Auth::user()->id);
+$user=3;
 $subscribeData=[
 
 //'user_id'=>$user->id,
-'user_id'=> Auth::user()->id,
-//'user_id'=>3,
+//'user_id'=> Auth::user()->id,
+'user_id'=>$user,
 'plan_id'=>$plan_id,
 'subscribe_limit_download'=>$plan->plan_limit_download_count,
 'created_at'=>Carbon::now(),
@@ -61,11 +63,11 @@ $subscribeData=[
 
 $subscribe=Subscribe::create($subscribeData);
 
-($email= new UserSubscribed($subscribe));
+//dd($email= Mail::to($user)->queue(new UserSubscribed($subscribe)));
+      
 
-Mail::to($user)->send($email);
 
-
+//Mail::to($user)->later(Carbon::now()->addMinutes(10),new UserSubscribed($subscribe));
 
 
 

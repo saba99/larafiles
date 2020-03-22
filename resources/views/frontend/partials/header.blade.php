@@ -386,7 +386,7 @@
                                             <span class="lnr lnr-briefcase"></span>برداشت ها </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{route('account.logout')}}">
                                             <span class="lnr lnr-exit"></span>خروج </a>
                                     </li>
                                 </ul>
@@ -723,7 +723,7 @@
                                                             <a href="category-grid.html">شبکه دسته بندی ها</a>
                                                         </li>
                                                         <li>
-                                                            <a href="category-list.html">شبکه دسته بندی ها </a>
+                                                            {{--  <a href="{{route('frontend.categories')}}">شبکه دسته بندی ها </a>  --}}
                                                         </li>
                                                         <li>
                                                             <a href="search-product.html">جستجوی محصولات</a>

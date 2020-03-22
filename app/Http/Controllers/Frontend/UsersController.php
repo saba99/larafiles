@@ -80,7 +80,7 @@ class UsersController extends Controller
 
         Auth::logout();
 
-        return redirect('/homePage');
+        return redirect('/');
     } 
 
     public function profile(){

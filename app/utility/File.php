@@ -24,7 +24,7 @@ if(!$userSubscribe){
 return false;
 
 }
-if($userSubscribe->subscribe_limit_download==$userSubscribe->subscribe_limit_download_count){
+if($userSubscribe->subscribe_limit_download >=$userSubscribe->subscribe_limit_download_count){
 
 return false;
 }

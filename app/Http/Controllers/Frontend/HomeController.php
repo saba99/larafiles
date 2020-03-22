@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Files;
 use App\Models\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,6 +27,7 @@ class HomeController extends Controller
                      
               
         ($package_file = Package::with('files')->get()->pluck('id')->toArray());
+        
 
        ($latestPackages = Package::orderby('created_at', 'desc')->get());
         $latestFiles=Files::orderby('created_at', 'desc')->get();
@@ -34,6 +37,19 @@ class HomeController extends Controller
         return view('frontend.home.index',compact(['files','packages', 'latestFiles', 'package_file', 'package_user', 'latestPackages']));
     }
 
+    public function details(Request $request, $package_id)
+    {
+
+        ($package_item = Package::findOrFail($package_id));
+
+        dd($packageFiles = $package_item->files()->get());
+
+        ($current_user = Auth::user()->id);
+
+        //$current_user=5;
+
+        return view('frontend.home.index', compact(['package_item', 'current_user', 'packageFiles']));
+    }  
     /**
      * Show the form for creating a new resource.
      *
@@ -41,13 +57,19 @@ class HomeController extends Controller
      */
     public function create()
     {   
-        $files=Files::all();
+        $files=Files::take(10)->get();
        // dd($files);
 
-        $packages=Package::all();
+        $packages=Package::take(10)->get();
+
+        $categories=Category::get();
+
         ($package_file=Package::with('files')->get()->pluck('id')->toArray());
+
+        $popularFiles=Files::popular()->get();
         
-        return view('frontend.home.homepage',compact(['files','packages', 'package_file']));
+        
+        return view('frontend.home.homepage',compact(['files','packages', 'package_file', 'categories', 'popularFiles']));
     }
 
     /**

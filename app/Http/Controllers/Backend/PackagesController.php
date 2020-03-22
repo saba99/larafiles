@@ -22,12 +22,14 @@ class PackagesController extends Controller
      $categories=Category::all();
         return view('admin.packages.create',compact(['categories']));
 
+
    }
 
    public function store(PackageRequest $request){
 
           //dd($request->has('categories'));
-          //dd($request->input('categories')
+          //dd($request->input('files'));
+    
 
         $newPackages = Package::create([
 
@@ -41,7 +43,7 @@ class PackagesController extends Controller
         ]);
         //dd($newPlan);
           //dd($newPackages->categories()->get());
-        if ($newPackages) {
+      
           
           if($request->has('categories')){
 
@@ -51,7 +53,7 @@ class PackagesController extends Controller
             return redirect()->route('admin.packages.list')->with('success', 'پکیج جدید با موفقیت ثبت شد ');
         }
 
-   }
+   
 
    public function edit($package_id){
 
