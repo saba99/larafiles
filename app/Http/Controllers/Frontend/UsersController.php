@@ -10,11 +10,16 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Frontend\LoginRequest;
 use App\Jobs\SendEmailNotify;
 use Carbon\Carbon;
+//use Laravel\Socialite\Facades\Socialite;
 
+//use  Socialite;
 use App\User;
 
 class UsersController extends Controller
 {   
+    
+    protected $redirectTo='/profile';
+
 
     public function register(){
 
@@ -86,6 +91,41 @@ class UsersController extends Controller
     public function profile(){
 
         return view('frontend.profile.index');
+    } 
+
+    public function  redirectToProvider($provider){
+
+
+          return Socialite::driver($provider)->redirect();
+    }
+
+    public function handelProviderCallback($provider){
+
+
+        $user=Socialite::driver($provider)->user();
+        dd($user);
+        $exitstingUser=User::whereEmail($user->getEmail())->first();
+
+        if($exitstingUser){
+
+            auth()->login($exitstingUser);
+
+            return redirect($this->redirectPath());
+
+        } 
+
+        User::create([
+
+        'name'=>$user->getName(),
+        'email'=>$user->getEmail(),
+        'password'=>bcrypt('$2y$10$akiCza2jp3Qlnzm0/o84xeae/7')
+
+        ]);
+        auth()->login($exitstingUser);
+
+        return redirect($this->redirectPath());
+
+
     }
     
 }

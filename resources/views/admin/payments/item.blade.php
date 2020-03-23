@@ -7,7 +7,7 @@
     <td>{{$payment->payment_res_num}}</td>
     <td>{{$payment->payment_ref_num}}</td>
     
-    <td>{{$payment->created_at}}</td>
+    <td>{{\Morilog\Jalali\Jalalian::forge($payment->created_at)->format('Y-m-d H:i:s')}}</td>
  <td>{{$payment->status_format()}}</td>
 
     <td class="text-center">

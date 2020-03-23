@@ -124,6 +124,7 @@
                                 {{-- </div> --}}
 
                                 <button class="btn btn--md btn--round register_btn" type="submit">ثبت نام</button>
+                                 <button class="btn btn--md  btn-warning btn--round" type="submit">ثبت نام با گیت هاب  </button>
 
                                 <div class="login_assist">
                                     <p>قبلا حساب کاربری ایجاد کرده اید ؟

@@ -723,7 +723,7 @@
                                                             <a href="category-grid.html">شبکه دسته بندی ها</a>
                                                         </li>
                                                         <li>
-                                                            {{--  <a href="{{route('frontend.categories')}}">شبکه دسته بندی ها </a>  --}}
+                                                           <a href="{{route('frontend.categories')}}">شبکه دسته بندی ها </a> 
                                                         </li>
                                                         <li>
                                                             <a href="search-product.html">جستجوی محصولات</a>
@@ -913,7 +913,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="contact.html">تماس با ما</a>
+                                    <a href="{{route('frontend.contact')}}">تماس با ما</a>
                                 </li>
                             </ul>
                         </div>

@@ -136,6 +136,11 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
     Route::post('account/register', 'UsersController@doRegister')->name('account.post.register');
     Route::get('account/logout', 'UsersController@logout')->name('account.logout');
 
+    //SOCIAL AUTH 
+     Route::get('social-login/{provider}','UsersController@redirectToProvider')->name('social-login.redirect');
+
+     Route::get('social-login/{provider}/callback','UsersController@handelProviderCallback')->name('social-login.callback');
+
     //USERS DASHBOARD
 
     Route::get('/dashboard','DashboardController@index')->name('user.dashboard');
@@ -151,8 +156,13 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
     //CATEGORIES 
      Route::get('/categories/{cat_id?}','CategoriesController@index')->name('frontend.categories');
     Route::get('/categories/{category_id?}', 'CategoriesController@item')->name('frontend.categories.item');
-    
+    Route::get('/package-categories/{category_id?}', 'CategoriesController@getFilesByCategory')->name('frontend.packageCategories.item');
 
+
+    //CONTACT US 
+
+   Route::get('/contact-us','ContactController@contact')->name('frontend.contact');
+    Route::post('/contact-us/post', 'ContactController@doContact')->name('frontend.post.contact');
 
 
 

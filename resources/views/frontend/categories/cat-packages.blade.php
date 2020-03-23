@@ -1,7 +1,7 @@
 @extends('frontend.layout.master')
 
+@section('content')
 
-@section('content') 
 
 
 <!--================================
@@ -10,7 +10,7 @@
 <section class="search-wrapper dir-rtl">
     <div class="search-area2 bgimage">
         <div class="bg_image_holder">
-            <img src="/assets/images/new/search.jpg" alt="">
+            <img src="assets/images/new/search.jpg" alt="">
         </div>
         <div class="container content_above">
             <div class="row">
@@ -119,21 +119,45 @@
                     <aside class="sidebar product--sidebar">
                         <div class="sidebar-card card--category">
                             <a class="card-title" href="#collapse1" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse1">
-                                <h4>دسته بندی پکیج ها 
+                                <h4>دسته بندی ها
                                     <span class="lnr lnr-chevron-down"></span>
                                 </h4>
                             </a>
                             <div class="collapse show collapsible-content" id="collapse1">
-                                @foreach($category as $category)
                                 <ul class="card-content">
                                     <li>
-                                        <a href="{{route('frontend.packageCategories.item',[$category->id])}}">
-                                            <span class="lnr lnr-chevron-right"></span>{{$category->name}}
+                                        <a href="#">
+                                            <span class="lnr lnr-chevron-right"></span>ورد پرس
                                             <span class="item-count">35</span>
                                         </a>
                                     </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="lnr lnr-chevron-right"></span>قالب psd
+                                            <span class="item-count">13</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="lnr lnr-chevron-right"></span>افزونه ها
+                                            <span class="item-count">08</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="lnr lnr-chevron-right"></span> قالبHTML
+                                            <span class="item-count">34</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="lnr lnr-chevron-right"></span>قالب Joomla
+                                            <span class="item-count">26</span>
+                                        </a>
+                                    </li>
                                 </ul>
-                                @endforeach
                             </div>
                             <!-- end /.collapsible_content -->
                         </div>
@@ -215,67 +239,80 @@
                 <!-- start col-md-9 -->
                 <div class="col-lg-9">
                     <div class="row">
-                      @if($category  )
-             @foreach($category as $cat)
-                <div class="product product--card  mx-4"  >
-                 
-                    <div class="product__thumbnail">
-                         
-                        <img src="{{asset('assets/images/new/pl1.jpg')}}" class="img-responsive" alt="Product Image">
-                        <div class="prod_btn">
-                            {{--  <a href="{{route('frontend.packageCategories.item',$cat->id)}}" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>  --}}
-                            <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
-                        </div>
-                        <!-- end /.prod_btn -->
-                    </div>
-                    <!-- end /.product__thumbnail -->
+                        
+                        <!-- end /.col-md-4 -->  
+                         <div class="col-lg-4 col-md-6">
+                            <!-- start .single-product -->
+                            @foreach($categoryPackages as $package)
+                            <div class="product product--card product--card-small">
 
-                    <div class="product-desc">
-                        <a href="single-product.html" class="product_title">
-                            {{--  <h4>{{$cat->name}}</h4>  --}}
-                        </a>
-                        <ul class="titlebtm">
-                            <li>
-                                <img class="auth-img" src="assets/images/auth.jpg" alt="author image">
-                                <p>                     
-                                    <a href="#"> </a>
-                                </p>
-                            </li>
-                            <li class="product_cat">
-                                <a href="#">
-                                    <span class="lnr lnr-book"></span>افزونه </a>
-                            </li>
-                        </ul>
-                            <p></p>
-                    </div>
-                    <!-- end /.product-desc -->
+                                <div class="product__thumbnail">
+                                    <img src="{{asset('assets/images/new/p1.jpg')}}" alt="Product Image">
+                                    <div class="prod_btn">
+                                        <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر </a>
+                                        <a href="single-product.html" class="transparent btn--sm btn--round">مشاهده</a>
+                                    </div>
+                                    <!-- end /.prod_btn -->
+                                </div>
+                                <!-- end /.product__thumbnail -->
 
-                    <div class="product-purchase">
-                        <div class="price_love">
-                            <span>152 قیمت</span>
-                            <p>
-                                <span class="lnr lnr-heart"></span> 90</p>
+                                <div class="product-desc">
+                                    <a href="#" class="product_title">
+                                       
+                                        <h4>{{$package->package_title}}</h4>
+                                    </a>
+                                    <ul class="titlebtm">
+                                        <li>
+                                            <img class="auth-img" src="assets/images/new/auth3.jpg" alt="author image">
+                                            <p>
+                                                <a href="#">رضایی</a>
+                                            </p>
+                                        </li>
+                                        <li class="out_of_class_name">
+                                            <div class="sell">
+                                                <p>
+                                                    <span class="lnr lnr-cart"></span>
+                                                    <span>27</span>
+                                                </p>
+                                            </div>
+                                            <div class="rating product--rating">
+                                                <ul>
+                                                    <li>
+                                                        <span class="fa fa-star"></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fa fa-star"></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fa fa-star"></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fa fa-star"></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="fa fa-star-half-o"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- end /.product-desc -->
+
+                                <div class="product-purchase">
+                                    <div class="price_love">
+                                        <span>{{$package->package_price}}تومان </span>
+                                    </div>
+                                    <a href="#">
+                                        <span class="lnr lnr-book"></span>ور پرس </a>
+                                </div>
+                                <!-- end /.product-purchase -->
+                            </div>@endforeach
+                            <!-- end /.single-product -->
                         </div>
-                        <div class="sell">
-                            <p>
-                                <span class="lnr lnr-cart"></span>
-                                <span>16</span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- end /.product-purchase -->
-                </div> 
-                
-               @endforeach
-               @endif
-            <div class="col-lg-4 col-md-6">
-               
-                <!-- start .single-product -->
-               
-                <!-- end /.single-product -->
-               
-            </div>
-            
+                        <!-- end /.col-md-4 --> 
+                        
                     </div>
                 </div>
                 <!-- end /.col-md-9 -->
@@ -318,7 +355,7 @@ START CALL TO ACTION AREA
 =================================-->
 <section class="call-to-action bgimage dir-rtl">
     <div class="bg_image_holder">
-        <img src="{{asset('assets/images/new/calltobg.jpg')}}" alt="">
+        <img src="assets/images/new/calltobg.jpg" alt="">
     </div>
     <div class="container content_above">
         <div class="row">
@@ -337,6 +374,13 @@ END CALL TO ACTION AREA
 =================================-->
 
 <!--================================
+
+
+
+
+
+
+
 
 
 

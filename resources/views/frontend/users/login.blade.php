@@ -116,13 +116,15 @@
                             </div>
 
                             <button class="btn btn--md btn--round" type="submit">ورود </button>
-
+                             <a href="{{route('social-login.redirect','github')}}" class="btn btn--md  btn-warning btn--round" type="submit">ورود با گیت هاب </a>
                             <div class="login_assist">
                                 <p class="recover">
                                     <a href="pass-recovery.html">نام کاربری </a> یا
                                     <a href="pass-recovery.html">کلمه عبور </a> فراموش کرده اید ؟</p>
                                 <p class="signup">هنوز
-                                    <a href="{{route('account.register')}}">ثبت نام </a>  نکرده اید ؟</p>
+                                    <a href="{{route('account.register')}}">ثبت نام </a>  نکرده اید ؟</p> 
+
+                                   
                             </div>
                         </div>
                         <!-- end .login--form -->

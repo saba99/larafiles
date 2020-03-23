@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Files;
 use Illuminate\Http\Request;
 use App\Models\Package;
+use App\Models\Category;
 use App\utility\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -131,4 +132,5 @@ class FilesController extends Controller
 
       return view('frontend.files.popular',compact(['popularFiles']));
    }
+
 }
