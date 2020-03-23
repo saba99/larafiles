@@ -97,14 +97,17 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
 
 
 //FRONTEND ROUTES
-Route::get('/', 'Frontend\HomeController@details');
-Route::resource('/', 'Frontend\HomeController');
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/homePage', 'Frontend\HomeController@create')->name('homePage');
 
-Route::group(['namespace'=>'Frontend'], function () {
+
+Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function () {
+
+    //HOME
+    Route::get('/', 'Frontend\HomeController@details');
+     Route::resource('/', 'HomeController');
+     Route::get('/homePage', 'HomeController@create')->name('homePage');
+    Route::get('/home', 'HomeController@index')->name('home');
 
     //SUBSCRIBE
     Route::get('/plans', 'PlansController@index')->name('frontend.plans.index');
@@ -112,6 +115,9 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::post('/subscribe/{plan_id}', 'SubscribesController@register')->name('frontend.subscribes.register');
 
     //FILES
+    Route::get('all-files', 'FilesController@allFiles')->name('frontend.files.all');
+    Route::get('popular-files', 'FilesController@popular')->name('frontend.files.popular');
+
     Route::get('file/{file_id}','FilesController@details')->name('frontend.files.details');
     
     Route::get('fileSingle/{file_id}', 'FilesController@single')->name('frontend.files.single');

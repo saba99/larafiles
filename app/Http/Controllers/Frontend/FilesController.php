@@ -74,6 +74,8 @@ class FilesController extends Controller
 
   $file_item->increment('file_download_count');
 
+  $file_item->updateDownloadCounts();
+
         return response()->download($filePath);
     }  
 
@@ -83,6 +85,8 @@ class FilesController extends Controller
     } 
 
     public function report(Request $request){
+
+  //$request->session()->get('last_activity');
 
       $file_id=($request->input('file_id'));
 
@@ -112,4 +116,19 @@ class FilesController extends Controller
       ];
 
     }
+
+    public function allFiles(){ 
+
+      $files=Files::paginate(5);
+      
+
+      return view('frontend.files.all-files',compact(['files']));
+    }
+   public function popular()
+   {
+
+      $popularFiles = Files::popular()->get();
+
+      return view('frontend.files.popular',compact(['popularFiles']));
+   }
 }

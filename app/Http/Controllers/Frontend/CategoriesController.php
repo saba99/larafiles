@@ -33,5 +33,7 @@ class CategoriesController extends Controller
       //return view('frontend.categories.item',compact(['categoryItem', 'categoryFiles', 'categoryPackages']));
 
     return view('frontend.categories.item',compact(['categoryItem', 'categoryFiles', 'categoryPackages']));
-    }
+    } 
+
+    
 }

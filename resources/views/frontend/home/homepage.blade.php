@@ -102,6 +102,18 @@
 </div>
 
 
-
+<div class="col-xs-3 col-md-3 mt-4">
+<div class="card">
+  <div class="card-header">
+   آخرین فعالیت ها
+  </div>
+  @if(\Illuminate\Support\Facades\Auth::check())
+  <div class="card-body">
+         {{session('last_activity')}}
+  </div>
+  
+</div>
+@endif
+</div>
 
 @endsection

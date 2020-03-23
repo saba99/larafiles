@@ -561,14 +561,14 @@
                                     </div>
                                 </li>
                                 <li class="has_dropdown">
-                                    <a href="all-products-list.html">همه محصولات</a>
+                                    <a href="{{route('frontend.files.all')}}">همه محصولات</a>
                                     <div class="dropdowns dropdown--menu">
                                         <ul>
                                             <li>
                                                 <a href="all-products.html">محصولات جدید </a>
                                             </li>
                                             <li>
-                                                <a href="all-products.html">محصولات محبوب </a>
+                                            <a href="{{route('frontend.files.popular')}}">محصولات محبوب </a>
                                             </li>
                                             <li>
                                                 <a href="index3.html">محصولات رایگان </a>

@@ -66,6 +66,27 @@ class Files extends Model
     public function updateDownloadCounts()
     { 
 
-        $isDownloadExistsForToday=FileDownload::where('file_id',$this->file_id)->where('created_at',Carbon::today());
+        $isDownloadExistsForToday=FileDownload::where('file_id',$this->file_id)->whereDate('created_at',Carbon::today());
+
+        if($isDownloadExistsForToday  && $isDownloadExistsForToday instanceof FileDownload){
+
+            $isDownloadExistsForToday->increment('download_count');
+
+           
+        }else{  
+
+            $file=new Files;
+              FileDownload::create([
+
+                'file_id' => $this->file_id,
+                //'file_id'=>$file->id,
+                'download_count' => 1,
+                'created_at' => Carbon::now()
+
+
+            ]);   
+           
+        }
+
     }
 }
