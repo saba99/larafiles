@@ -70,6 +70,7 @@
                             <div class="col-md-12">
                                 <div class="single_product clearfix">
                                     <div class="col-lg-5 col-md-7 v_middle">
+                                       
                                         <div class="product__description">
                                             {{-- <img src="images/new/pur1.jpg" alt="Purchase image"> --}}
                                             {{-- <div class="short_desc "> --}}
@@ -86,6 +87,7 @@
                                                 
                                             {{-- </div> --}}
                                         </div>
+                                       
                                         <!-- end /.product__description -->
                                     </div>
                                     
@@ -179,7 +181,8 @@
  
                     <div class="row mt-4">
                             <div class="col-md-6 offset-md-6">
-                                <form action="{{route('frontend.subscribes.register',$plan->id)}}" method="post">
+                                {{--  <form action="{{route('frontend.subscribes.register',$plan->id)}}" method="post">  --}}
+                                    <form action="{{route('payment.start',$plan->id)}}" method="post">
                                     @csrf
                                     <input type="hidden"  name="plan_id" value="{{$plan->id}}">
                                 <div class="cart_calculation">

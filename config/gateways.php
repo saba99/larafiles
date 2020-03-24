@@ -8,6 +8,7 @@ return  [
 
         'terminalID'=>102355,
         'userName'=>'SabaGateway',
-        'password'=>'bhki54861ds1fdf'
+        'password'=>'bhki54861ds1fdf',
+        
     ]
     ];

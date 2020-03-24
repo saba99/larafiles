@@ -19,9 +19,11 @@ class PackagesController extends Controller
 
        ($current_user = Auth::user()->id);
 
+       ($user_name=Auth::user()->name);
+
        //$current_user=5;
        
-        return view('frontend.packages.index', compact([ 'package_item', 'current_user', 'packageFiles']));
+        return view('frontend.packages.index', compact([ 'package_item', 'current_user', 'packageFiles', 'user_name']));
     }  
 
     public  function singlePackage(Request $request, $package_id){

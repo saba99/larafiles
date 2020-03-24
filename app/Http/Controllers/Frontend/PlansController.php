@@ -12,6 +12,8 @@ class PlansController extends Controller
     {
 
         $plans = Plan::all();
-        return view('frontend.plans.index', compact(['plans']));
+
+        return view('frontend.plans.plans', compact(['plans']));
+        //return view('frontend.plans.index', compact(['plans']));
     } 
 }

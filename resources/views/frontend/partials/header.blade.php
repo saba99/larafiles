@@ -809,7 +809,7 @@
                                                             <a href="dashboard-manage-item.html">ویرایش آیتم</a>
                                                         </li>
                                                         <li>
-                                                            <a href="dashboard-withdrawal.html">خروج</a>
+                                                            <a href="{{route('account.logout')}}">خروج</a>
                                                         </li>
                                                         <li>
                                                             <a href="dashboard-manage-item.html">مدیریت آیتم</a>

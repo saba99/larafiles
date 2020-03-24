@@ -7,15 +7,25 @@ use App\Mail\UserSubscribed;
 use App\Models\Plan;
 use App\Models\Subscribe;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 use function GuzzleHttp\Promise\queue;
 
+
 class SubscribesController extends Controller
 {
-    
+ /*public function subscribe(){
+
+ ($plans=Plan::all());
+
+ return view('frontend.subscribes.index', compact(['plans']));
+
+//return view('frontend.subscribes.cart', compact(['plans']));
+
+  }  */
 public function index(Request $request,$plan_id){
 
 
@@ -25,10 +35,10 @@ public function index(Request $request,$plan_id){
         //dd($subscribe=Subscribe::with('plans')->whereId($plan_id)->get());
 
 
-        return view('frontend.subscribes.cart', compact(['plan']));
+ return view('frontend.subscribes.cart', compact(['plan']));
 //return view('frontend.subscribes.index',compact(['plan']));
 
-} 
+}
 
 public function register(Request $request,$plan_id){
 
@@ -63,13 +73,15 @@ $subscribeData=[
 
 $subscribe=Subscribe::create($subscribeData);
 
-//dd($email= Mail::to($user)->queue(new UserSubscribed($subscribe)));
-      
+                //dd($email= Mail::to($user)->queue(new UserSubscribed($subscribe)));
 
 
-//Mail::to($user)->later(Carbon::now()->addMinutes(10),new UserSubscribed($subscribe));
 
+                //Mail::to($user)->later(Carbon::now()->addMinutes(10),new UserSubscribed($subscribe));
+ Session::flash('success', 'طرح اشتراکی با موفقیت خریداری شد');
+ 
 
+return redirect()->route('frontend.packages.details',$plan->id);
 
 }
 

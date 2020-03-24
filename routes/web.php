@@ -112,6 +112,7 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
     //SUBSCRIBE
     Route::get('/plans', 'PlansController@index')->name('frontend.plans.index');
     Route::get('/subscribe/{plan_id}', 'SubscribesController@index')->name('frontend.subscribes.index');
+    //Route::get('/subscribe', 'SubscribesController@subscribe')->name('frontend.subscribes.index');
     Route::post('/subscribe/{plan_id}', 'SubscribesController@register')->name('frontend.subscribes.register');
 
     //FILES
@@ -164,7 +165,11 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
    Route::get('/contact-us','ContactController@contact')->name('frontend.contact');
     Route::post('/contact-us/post', 'ContactController@doContact')->name('frontend.post.contact');
 
+//PAYMENTS 
 
+
+Route::post('payment/{plan_id}','PaymentsController@redirect')->name('payment.start');
+Route::post('payment/mellat/verify', 'PaymentsController@verify')->name('payment.verify');
 
 
 

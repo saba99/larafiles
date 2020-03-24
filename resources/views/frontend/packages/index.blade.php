@@ -6,6 +6,18 @@
  <!--================================
         START BREADCRUMB AREA
     =================================-->
+    
+    @if(Session::has('success'))
+
+<div class="alert alert-success">
+
+  <ul class="list-unstyled">
+    <li>{{Session('success')}}</li>
+  </ul>
+</div>
+
+@endif
+
     <section class="breadcrumb-area dir-rtl">
         <div class="container">
             <div class="row">
@@ -666,7 +678,7 @@
                                                         </div>
                                                         <div class="media-body">
                                                             <div class="media-heading">
-                                                                <h4>دامن دریا </h4>
+                                                                <h4>{{$user_name}}</h4>
                                                                 <span>4 ساعت پیش </span>
                                                             </div>
                                                             <span class="comment-tag author">طراح </span>
@@ -1054,7 +1066,7 @@
                     <!-- end /.item-info -->
                 </div>
                 <!-- end /.col-md-8 -->
-
+           
                 <div class="col-lg-4">
                     <aside class="sidebar sidebar--single-product">
                         <div class="sidebar-card card-pricing">
@@ -1093,16 +1105,17 @@
                                 </li>
                             </ul>
                             <!-- end /.pricing-options -->
-                                   {{--  @if(App\Utility\User::is_user_subscribed($current_user))  --}}
+                                     {{--  @if(App\Utility\User::is_user_subscribed($current_user))   --}}
                             <div class="purchase-button">
                                 
                                 <a href="{{route('frontend.packages.download',[$package_item->id])}}" class="btn btn--lg btn--round">دانلود فایل</a>
                                   <a  data-fid="{{$package_item->id}}" class=" btn-warning btn btn--lg btn--round btn_report_file">گزارش خطا </a>
                                 {{--  @else  --}}
-                                <a href="{{route('frontend.subscribes.index',[$package_item->id])}}" class="btn btn--lg btn--round cart-btn">
+                                <a href="{{route('frontend.plans.index',[$package_item->id])}}" class="btn btn--lg btn--round cart-btn">
                                     <span class="lnr lnr-cart"></span> افزودن به سبد خرید  </a>
-                            </div>
-                            {{--  @endif  --}}
+                            </div> 
+                             {{--  @endif  --}}
+                        
                             <!-- end /.purchase-button -->
                         </div>
                         <!-- end /.sidebar--card -->
@@ -1214,8 +1227,8 @@
                                 </div>
 
                                 <div class="author">
-                                    <h4>دامن دریا </h4>
-                                    <p>شروع : 1 فروردین 98</p>
+                                    <h4>{{$user_name}} </h4>
+                                    <p>شروع : {{\Morilog\Jalali\Jalalian::forge($package_item->created_at)->format('d-m-Y ')}}</p>
                                 </div>
                                 <!-- end /.author -->
 
@@ -1254,6 +1267,7 @@
                     </aside>
                     <!-- end /.aside -->
                 </div>
+            
                 <!-- end /.col-md-4 -->
             </div>
             <!-- end /.row -->

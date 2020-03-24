@@ -21,24 +21,27 @@
               @endif
           <p>
               اطلاعات خرید طرح اشتراکی
-          </p>  </div>
-              <tr>
-                  <td>عنوان</td>
+          </p> 
+         </div>
+         <th>شناسه</th>
+         <th>عنوان</th>
+         <th>قیمت</th>
+         <th>محدودیت دانلود روزانه</th>
+         <th>تعداد روز ها</th>
+         
+                <tr> 
+                  
+                  <td>{{$plan->id}}</td>
+                
                   <td>{{$plan->plan_title}}</td>
-              </tr>
-               <tr>
-                  <td>قیمت</td>
+              
                   <td>{{number_format($plan->plan_price)}}</td>
-              </tr>
-              <tr>
-                  <td>محدودیت دانلود روزانه</td>
+              
                   <td>{{$plan->plan_limit_download_count}}</td>
-              </tr>
-              <tr>
-                  <td>تعداد روز ها</td>
+              
                   <td>{{$plan->plan_price}}</td>
               </tr>
-      
+         
      </table>
      <form action="{{route('frontend.subscribes.register',$plan->id)}}" method="post">
          @csrf
