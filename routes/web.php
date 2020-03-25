@@ -169,6 +169,10 @@ Route::post('payment/mellat/verify', 'PaymentsController@verify')->name('payment
 
 Route::get('search','PackagesController@search')->name('search');
 
+ 
+//SEND EMAIL
+Route::get('send-email','MailSend@mailSend');
+
 
 });
 Auth::routes();

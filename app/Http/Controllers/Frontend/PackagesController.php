@@ -122,6 +122,11 @@ class PackagesController extends Controller
 
         $packages=Package::where('package_title','like',"%$query%")->orWhere('package_description','like',"%$query%")->paginate(1);
 
+
+       //$packages=Package::search($query)->paginate(2);
+
         return view('frontend.packages.search-results')->with('packages',$packages);
-    }
+    }  
+
+    
 }

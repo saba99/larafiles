@@ -8,8 +8,10 @@ use App\Models\Files;
 use App\User; 
 
 use App\Models\Category;
+use Nicolaslopezj\Searchable\SearchableTrait;
 class Package extends Model
-{   
+{
+
     protected $fillable=['package_title','package_price', 'package_description'];
 
 
@@ -33,4 +35,28 @@ class Package extends Model
 
         return $this->morphToMany(Category::class,'categorizable');
     }
+    use SearchableTrait;
+    /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchable = [
+        /**
+         * Columns and their priority in search results.
+         * Columns with higher values are more important.
+         * Columns with equal values have equal importance.
+         *
+         * @var array
+         */
+        'columns' => [
+
+            'packages.package_description' => 2,
+            'packages.package_title' => 2,
+
+
+        ],
+
+    ];
+    
 }
