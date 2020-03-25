@@ -1,10 +1,8 @@
 <?php
-
-
 namespace App\Services\Payment;
 
 use App\Models\Payment;
-use SoapClient;
+//use SoapClient;
 use App\Utility\Order;
 
 class Mellat
@@ -52,6 +50,8 @@ class Mellat
     ];
 
     $response = $this->client->call('bpPayRequest', $args, $this->namespace);
+
+    //dd($response);
     if ($response) {
 
       $rawResponseResult = $response['return'];
@@ -82,8 +82,71 @@ class Mellat
    
   }
 
-  public function  verifyPayment()
+  public function  verifyPayment(array $params)
   {
+
+   if($params['ResCode'] !="0"){
+
+      return false;
+   }  
+
+   $args=[
+      'terminalId' => $this->terminalID,
+      'userName' => $this->userName,
+      'userPassword' => $this->password,
+      'orderId' => Order::generateOrderId(),
+      'saleOrderId'=>$params['SaleOrderId'],
+      'saleReferenceId'=>$params['SaleReferenceId']
+
+   ];
+
+   $response=$this->client->call('bpVerifyRequest',$args,$this->namespace);
+    
+
+   if(!$response || empty($response) ){
+
+    return false;
+   } 
+
+   $result=$response['return'];
+
+   if($result  !=0){
+
+    return false;
+   } 
+    
+//action for update database 
+
+$paymentItem=Payment::where('payment_res_num',$params['SaleOrderId'])->get();
+
+$paymentItem->payment_ref_num=$params['SaleReferenceId'];
+
+$paymentItem->payment_status=Payment::COMPLETE;
+
+$paymentItem->save();
+
+
+   $settleArgs=[
+
+      'terminalId' => $this->terminalID,
+      'userName' => $this->userName,
+      'userPassword' => $this->password,
+      'orderId' => Order::generateOrderId(),
+      'saleOrderId' => $params['SaleOrderId'],
+      'saleReferenceId' => $params['SaleReferenceId']
+
+
+
+   ];
+
+   $settleResponse=$this->client->call('bpSettleRequest',$settleArgs,$this->namespace);
+
+   if($settleResponse && $settleResponse['return'] == "0"){
+
+
+   }
+
+   return true;
   }
 
   private function redirectToBank(string $code)

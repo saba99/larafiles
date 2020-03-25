@@ -107,6 +107,18 @@
             
           </ul>
         </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>کتاب ها  </span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('books.index')}}"><i class="fa fa-circle-o"></i> لیست کتاب ها</a></li>
+          
+            <li><a href="{{route('books.create')}}"><i class="fa fa-circle-o"></i> افزودن کتاب ها </a></li>
+          
+          </ul>
+        </li>
        
       </ul>
     </section>

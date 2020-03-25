@@ -73,24 +73,17 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     Route::get('/payments/delete/{payment_id}', 'PaymentController@delete')->name('admin.payments.delete');
 
     //CATEGORIES  ROUTES 
-    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
-    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
-    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
-    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
-    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
-    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
-    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
+    Route::get('/categories/sample', 'CategoriesController@sample')->name('admin.categories.sample');
+    Route::get('/categories', 'CategoriesController@index')->name('admin.categories.list');
+    Route::get('/categories/create', 'CategoriesController@create')->name('admin.categories.create');
+    Route::post('/categories/create', 'CategoriesController@store')->name('admin.categories.store');
+    Route::get('/categories/edit/{categories_id}', 'CategoriesController@edit')->name('admin.categories.edit');
+    Route::post('/categories/update/{categories_id}', 'CategoriesController@update')->name('admin.categories.update');
+    Route::get('/categories/delete/{categories_id}', 'CategoriesController@delete')->name('admin.categories.delete');
 
-    //CATEGORIES  ROUTES 
-    Route::get('/categories/sample', 'Backend\CategoriesController@sample')->name('admin.categories.sample');
-    Route::get('/categories', 'Backend\CategoriesController@index')->name('admin.categories.list');
-    Route::get('/categories/create', 'Backend\CategoriesController@create')->name('admin.categories.create');
-    Route::post('/categories/create', 'Backend\CategoriesController@store')->name('admin.categories.store');
-    Route::get('/categories/edit/{categories_id}', 'Backend\CategoriesController@edit')->name('admin.categories.edit');
-    Route::post('/categories/update/{categories_id}', 'Backend\CategoriesController@update')->name('admin.categories.update');
-    Route::get('/categories/delete/{categories_id}', 'Backend\CategoriesController@delete')->name('admin.categories.delete');
-
-
+   
+    //BOOKS 
+    Route::resource('/books', 'BookController');
 });
 
 
@@ -170,6 +163,8 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
 
 Route::post('payment/{plan_id}','PaymentsController@redirect')->name('payment.start');
 Route::post('payment/mellat/verify', 'PaymentsController@verify')->name('payment.verify');
+
+
 
 
 

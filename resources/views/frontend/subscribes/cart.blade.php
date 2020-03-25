@@ -181,8 +181,8 @@
  
                     <div class="row mt-4">
                             <div class="col-md-6 offset-md-6">
-                                {{--  <form action="{{route('frontend.subscribes.register',$plan->id)}}" method="post">  --}}
-                                    <form action="{{route('payment.start',$plan->id)}}" method="post">
+                                <form action="{{route('frontend.subscribes.register',$plan->id)}}" method="post"> 
+                                    {{--  <form action="{{route('payment.start',$plan->id)}}" method="post">  --}}
                                     @csrf
                                     <input type="hidden"  name="plan_id" value="{{$plan->id}}">
                                 <div class="cart_calculation">
