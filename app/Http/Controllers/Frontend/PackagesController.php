@@ -104,4 +104,24 @@ class PackagesController extends Controller
             'message' => 'درخواست شما معتبر نمی باشد  '
         ];
     }
+
+    public function search(Request $request)
+
+    {   
+           $request->validate([
+
+              'query'=>'required|min:3',
+
+           ],[
+
+              'query.required'=>'وارد کردن کاراکتر الزامی است',
+              'query.min'=> ' تعداد کاراکتر های مورد جستجو باید حداقل سه تا باشد' 
+        
+           ]);
+        $query=$request->input('query');
+
+        $packages=Package::where('package_title','like',"%$query%")->orWhere('package_description','like',"%$query%")->paginate(1);
+
+        return view('frontend.packages.search-results')->with('packages',$packages);
+    }
 }

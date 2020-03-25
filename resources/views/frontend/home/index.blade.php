@@ -55,9 +55,9 @@ START HERO AREA
                 <!-- start .col-sm-12 -->
                 <div class="col-sm-12">
                     <!-- start .search_box -->
-                    <div class="search_box">
-                        <form action="#">
-                            <input type="text" class="text_field" placeholder="جستجو در محصولات ...">
+                    <div class="search_box" >
+                        <form action="{{route('search')}}" method="GET" class="search-form">
+                            <input type="text" name="query" id="query"  class="text_field" placeholder="جستجو در محصولات ...">
                             <div class="search__select select-wrap">
                                 <select name="category" class="select--field" id="blah">
                                     <option value="">همه دسته بندی ها</option>

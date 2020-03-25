@@ -165,7 +165,9 @@ Route::post('payment/{plan_id}','PaymentsController@redirect')->name('payment.st
 Route::post('payment/mellat/verify', 'PaymentsController@verify')->name('payment.verify');
 
 
+//SEARCH 
 
+Route::get('search','PackagesController@search')->name('search');
 
 
 });

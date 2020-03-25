@@ -56,5 +56,7 @@ class CategoriesController extends Controller
 
     //dd($category->name);
     return view('frontend.categories.cat-packages', compact(['category', 'products', 'categories', 'categoryPackages']));
-  }
+  } 
+
+  
 }
