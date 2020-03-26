@@ -270,55 +270,44 @@
 
                                     <div class="dropdowns dropdown--cart">
                                         <div class="cart_area">
+                                             @if(Session::has('cart'))
+                                             {{-- @foreach(Session::get('cart')->items as $package)  --}}
                                             <div class="cart_product">
                                                 <div class="product__info">
                                                     <div class="thumbn">
-                                                        <img src="assets/images/capro1.jpg" alt="cart product thumbnail">
+                                                       <img src="" alt="cart product thumbnail">
                                                     </div>
 
-                                                    <div class="info">
-                                                        <a class="title" href="single-product.html">قالب ورد پرس
-                                                            دریا </a>
+                                                    <div class="info">   {{-- --}}
+                                                        <a class="title" href="single-product.html">{{$package->package_title}}
+                                                            </a> 
+                                                            
                                                         <div class="cat">
                                                             <a href="#">
-                                                                <img src="assets/images/catword.png" alt="">ورد پرس </a>
+                                                                <img src="/assets/images/catword.png" alt="">ورد پرس </a>
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                    
                                                 <div class="product__action">
                                                     <a href="#">
                                                         <span class="lnr lnr-trash"></span>
                                                     </a>
-                                                    <p>60 تومان</p>
+                                                    <p>{{$package->package_price}} تومان </p>
                                                 </div>
                                             </div>
-                                            <div class="cart_product">
-                                                <div class="product__info">
-                                                    <div class="thumbn">
-                                                        <img src="assets/images/capro2.jpg" alt="cart product thumbnail">
-                                                    </div>
-
-                                                    <div class="info">
-                                                        <a class="title" href="single-product.html">قالب فروشگاهی</a>
-                                                        <div class="cat">
-                                                            <a href="#">
-                                                                <img src="assets/images/catword.png" alt="">ورد پرس </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product__action">
-                                                    <a href="#">
-                                                        <span class="lnr lnr-trash"></span>
-                                                    </a>
-                                                    <p>60 تومان</p>
-                                                </div>
+                                            {{-- @endforeach --}}
+                                            @else 
+                                            <div>
+                                            <p class="mt-3">سبد خرید شما خالی است </p>
                                             </div>
+                                            @endif
+                                           {{-- @endforeach --}}
                                             <div class="total">
                                                 <p>
-                                                    <span>مجموع :</span>80 تومان</p>
+                                                    <span>مجموع :</span>{{\Illuminate\Support\Facades\Session::has('cart') ? Session::get('cart')->totalQty.'آیتم':' '}}  {{Session::has('cart')? Session::get('cart')->totalPrice.'تومان':''}}</p>
                                             </div>
+                                            
                                             <div class="cart_action">
                                                 <a class="go_cart" href="cart.html">سبد خرید </a>
                                                 <a class="go_checkout" href="checkout.html">باز بینی </a>
@@ -327,6 +316,7 @@
                                     </div>
                                 </li>
                             </ul>
+                            {{-- @endif --}}
                         </div>
                         <!--start .author__notification_area -->
 
@@ -354,8 +344,8 @@
                                             <span class="lnr lnr-home"></span>داشبورد</a>
                                     </li>
                                     <li>
-                                        <a href="dashboard-setting.html">
-                                            <span class="lnr lnr-cog"></span> تنظیمات</a>
+                                <a href="{{route('send-email')}}">
+                                            <span class="lnr lnr-cog"></span> ارسال ایمیل</a>
                                     </li>
                                     <li>
                                         <a href="cart.html">
@@ -459,8 +449,8 @@
                                             <span class="lnr lnr-home"></span>داشبورد</a>
                                     </li>
                                     <li>
-                                        <a href="dashboard-setting.html">
-                                            <span class="lnr lnr-cog"></span> تنظیمات</a>
+                                        <a href="{{route('send-email')}}">
+                                            <span class="lnr lnr-cog"></span> ارسال ایمیل</a>
                                     </li>
                                     <li>
                                         <a href="cart.html">
@@ -726,10 +716,10 @@
                                                            <a href="{{route('frontend.categories')}}">شبکه دسته بندی ها </a> 
                                                         </li>
                                                         <li>
-                                                            <a href="search-product.html">جستجوی محصولات</a>
+                                                            <a href="{{route('search')}}">جستجوی محصولات</a>
                                                         </li>
                                                         <li>
-                                                            <a href="single-product.html">یک محصول v1</a>
+                                                            <a href="">یک محصول v1</a>
                                                         </li>
                                                         <li>
                                                             <a href="single-product-v2.html">تنها محصول V2</a>

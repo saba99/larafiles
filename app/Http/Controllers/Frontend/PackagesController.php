@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\Files;
 use App\Models\Package;
 use Illuminate\Http\Request;
@@ -14,7 +15,16 @@ class PackagesController extends Controller
     public function details(Request $request,$package_id){
 
         ($package_item = Package::findOrFail($package_id));
+        /*dd($package = Package::with(['comments' => function ($q) {
+                $q->where('status', 1)
+                    ->where('parent_id', null);
+                       }
+        ])->first());*/
 
+        //($package=Package::with('comments')->first());
+
+        ($comments = Comment::all()->where('status',1));
+         
         ($packageFiles = $package_item->files()->get()); 
 
        ($current_user = Auth::user()->id);
@@ -23,7 +33,7 @@ class PackagesController extends Controller
 
        //$current_user=5;
        
-        return view('frontend.packages.index', compact([ 'package_item', 'current_user', 'packageFiles', 'user_name']));
+        return view('frontend.packages.index', compact([ 'package_item', 'current_user', 'packageFiles', 'user_name','package','comments']));
     }  
 
     public  function singlePackage(Request $request, $package_id){

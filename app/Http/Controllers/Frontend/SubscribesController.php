@@ -57,8 +57,8 @@ $expired_at=Carbon::now();
 
 $expired_at->addDays($plans_days_count);
 
-//($user=Auth::user()->id);
-$user=3;
+($user=Auth::user()->id);
+//$user=3;
 $subscribeData=[
 
 //'user_id'=>$user->id,

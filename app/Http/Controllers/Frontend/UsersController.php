@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests\Frontend\LoginRequest;
 use App\Jobs\SendEmailNotify;
+use App\Models\Support;
 use Carbon\Carbon;
 //use Laravel\Socialite\Facades\Socialite;
 
 //use  Socialite;
 use App\User;
+
 
 class UsersController extends Controller
 {   
@@ -124,6 +126,26 @@ class UsersController extends Controller
         auth()->login($exitstingUser);
 
         return redirect($this->redirectPath());
+
+
+    } 
+
+    public function support(Request $request){
+
+
+        $newSupport = [
+
+            'subject' => $request->input('subject'),
+
+            'description' => $request->input('description'),
+           
+
+
+        ];
+
+        $newUser = Support::create($newSupport);
+
+        return redirect()->back()->with('success-support', 'نظر شما با موفقیت به پشتیبانی ارسال شد ');
 
 
     }

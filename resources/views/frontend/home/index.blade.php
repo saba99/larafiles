@@ -659,7 +659,7 @@ START PRODUCTS AREA
                         <img src="assets/images/new/p1.jpg" alt="Product Image">
                         <div class="prod_btn">
                             <a href="{{route('frontend.packages.details',$package->id)}}" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
-                            <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
+                            <a href="{{route('cart.add',['id'=>$package->id])}}" class="transparent btn--sm btn--round">افزودن به کارت </a>
                         </div>
                         <!-- end /.prod_btn -->
                     </div>
@@ -1074,13 +1074,14 @@ START FOLLOWERS FEED AREA
                     <!--&lt;!&ndash; end /.single-product &ndash;&gt;-->
 
                     <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
+
                     <!--<div class="product product&#45;&#45;card">-->
 
                         <!--<div class="product__thumbnail">-->
                             <!--<img src="assets/images/new/p2.jpg" alt="Product Image">-->
                             <!--<div class="prod_btn">-->
                                 <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اطلاعات بیشتر</a>-->
-                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">نمایش </a>-->
+                                {{-- <!--<a href="{{route(['cart.add','id'=>$package->id])}}" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اضافه کردن به سبد خرید  </a>--> --}}
                             <!--</div>-->
                             <!--&lt;!&ndash; end /.prod_btn &ndash;&gt;-->
                         <!--</div>-->

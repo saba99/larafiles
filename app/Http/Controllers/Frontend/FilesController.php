@@ -48,7 +48,7 @@ class FilesController extends Controller
             // abort(404);
             return redirect('frontend.files.access');
          }*/ 
-         if(!\App\utility\File::user_can_download($current_user->id)){
+        if(!\App\utility\File::user_can_download($current_user->id)){
 
             return redirect('frontend.files.access');
 
@@ -57,7 +57,7 @@ class FilesController extends Controller
          }
          
 
-      $file_item=Files::findOrFail($file_id);
+      dd($file_item=Files::findOrFail($file_id));
 
       if(!$file_item){
 

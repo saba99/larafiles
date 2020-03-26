@@ -84,6 +84,17 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
    
     //BOOKS 
     Route::resource('/books', 'BookController');
+
+
+    //COMMENTS 
+    Route::get('/comments','CommentController@index')->name('admin.comment.index');
+    Route::get('comments/{id}', 'CommentController@edit')->name('admin.comments.edit');
+    Route::post('comments/{id}', 'CommentController@actions')->name('comments.actions');
+    Route::patch('comments/{id}', 'CommentController@update')->name('admin.comments.update');
+    Route::delete('comments/{id}', 'CommentController@destroy')->name('admin.comments.destroy');
+
+
+
 });
 
 
@@ -171,7 +182,22 @@ Route::get('search','PackagesController@search')->name('search');
 
  
 //SEND EMAIL
-Route::get('send-email','MailSend@mailSend');
+Route::get('send-email','MailSend@mailSend')->name('send-email');
+
+    //COMMENTS
+Route::get('package-details', 'CommentController@index')->name('comment.index');
+Route::post('comments/store/{package_id}', 'CommentController@store')->name('comment.store');
+
+    //Route::get('comments', 'CommentController@reply')->name('comment.reply');
+    Route::post('comments/post/{package_id?}', 'CommentController@reply')->name('comment.post.reply');
+
+    //SUPPORT 
+    Route::post('support', 'UsersController@support')->name('support');
+    Route::post('support/post','UsersController@support')->name('support.post');
+
+    //CART 
+
+    Route::get('/add-to-cart/{id}','CartController@addToCart')->name('cart.add');
 
 
 });
