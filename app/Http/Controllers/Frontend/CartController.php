@@ -37,5 +37,20 @@ class CartController extends Controller
 
      return view('frontend.partials.header',compact(['package']));
 
+   } 
+
+   public function removeItem(Request $request,$id){
+
+
+        $package = Package::findOrFail($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+
+        $cart = new Cart($oldCart); 
+        $cart->remove($package,$package->id);
+
+        $request->session()->put('cart', $cart);
+
+        return back();
+
    }
 }

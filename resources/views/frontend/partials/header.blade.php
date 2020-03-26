@@ -271,32 +271,35 @@
                                     <div class="dropdowns dropdown--cart">
                                         <div class="cart_area">
                                              @if(Session::has('cart'))
-                                             {{-- @foreach(Session::get('cart')->items as $package)  --}}
+                                             @foreach(Session::get('cart')->items as $package) 
                                             <div class="cart_product">
                                                 <div class="product__info">
                                                     <div class="thumbn">
-                                                       <img src="" alt="cart product thumbnail">
+                                                       <img src="{{$package['item']->files[0]->file_name}}" alt="cart product thumbnail">
                                                     </div>
 
                                                     <div class="info">   {{-- --}}
-                                                        <a class="title" href="single-product.html">{{$package->package_title}}
+                                                        <a class="title" href="single-product.html">{{$package['item']->package_title}}
                                                             </a> 
                                                             
                                                         <div class="cat">
                                                             <a href="#">
-                                                                <img src="/assets/images/catword.png" alt="">ورد پرس </a>
+                                                                <a class="title">تعداد:{{$package['qty']}} </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                     
                                                 <div class="product__action">
                                                     <a href="#">
-                                                        <span class="lnr lnr-trash"></span>
+                                                        <form id="remove-item_{{$package['item']->id}}" action="{{route('cart.remove',['id'=>$package['item']->id])}}" method="POST">
+                                                            @csrf
+                                                        <span class="lnr lnr-trash" onclick="event.preventDefault();document.getElementById('remove-item_{{$package['item']->id}}').submit();"></span>
+                                                    </form>
                                                     </a>
-                                                    <p>{{$package->package_price}} تومان </p>
+                                                    <p>{{$package['item']->package_price}} تومان </p>
                                                 </div>
                                             </div>
-                                            {{-- @endforeach --}}
+                                            @endforeach
                                             @else 
                                             <div>
                                             <p class="mt-3">سبد خرید شما خالی است </p>
@@ -305,7 +308,12 @@
                                            {{-- @endforeach --}}
                                             <div class="total">
                                                 <p>
-                                                    <span>مجموع :</span>{{\Illuminate\Support\Facades\Session::has('cart') ? Session::get('cart')->totalQty.'آیتم':' '}}  {{Session::has('cart')? Session::get('cart')->totalPrice.'تومان':''}}</p>
+                                                    <span>مجموع :</span>{{\Illuminate\Support\Facades\Session::has('cart') ? Session::get('cart')->totalQty.'آیتم':' '}} 
+                                                     {{Session::has('cart')? Session::get('cart')->totalPrice.'تومان':''}}
+
+
+                                                    </p> 
+                                                    <span>{{\Illuminate\Support\Facades\Session::has('cart') ? Session::get('cart')->totalPurePrice.'مبلغ خام':' '}}</span>
                                             </div>
                                             
                                             <div class="cart_action">

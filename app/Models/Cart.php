@@ -12,6 +12,8 @@ class Cart
 
     public $totalPrice=0;
 
+    public $totalPurePrice=0;
+
     public function __construct($oldCart)
     {
         if($oldCart){
@@ -19,6 +21,7 @@ class Cart
            $this->items=$oldCart->items;
             $this->totalPrice = $oldCart->totalPrice;
             $this->totalQty = $oldCart->totalQty;
+            $this->totalPurePrice=$oldCart->totalPurePrice;
 
         }
     } 
@@ -44,11 +47,42 @@ class Cart
 
        $this->totalQty ++;
 
-       $this->totalPrice +=$item->price;
+       $this->totalPrice+=$item->price;
 
 
+       $this->totalPurePrice+=$item->price;
 
 
+    }  
+
+    public function remove($item,$id){
+
+    if($this->items){
+
+            if (array_key_exists($id, $this->items)) {
+
+
+              
+                
+           
+            $this->items[$id]['price'] -=$item->price;
+             $this->totalPrice  -=$item->price;
+
+            $this->totalQty--;
+           
+
+            $this->totalPurePrice  -= $item->price;
+
+            if($this->items[$id]['qty'] >1){
+
+                    $this->items[$id]['qty']--;
+
+            }else{
+
+                unset($this->items[$id]);
+            }
+ }
+    }
 
     }
 
