@@ -275,7 +275,8 @@
                                             <div class="cart_product">
                                                 <div class="product__info">
                                                     <div class="thumbn">
-                                                       <img src="{{$package['item']->files[0]->file_name}}" alt="cart product thumbnail">
+                                                        {{--{{$package['item']->files[0]->file_name}}--}}
+                                                       <img src="" alt="cart product thumbnail">
                                                     </div>
 
                                                     <div class="info">   {{-- --}}
@@ -317,7 +318,11 @@
                                             </div>
                                             
                                             <div class="cart_action">
-                                                <a class="go_cart" href="cart.html">سبد خرید </a>
+                                                
+                                                    {{--  <a class="go_cart" href="{{route('cart.view',$package['item']['id'])}}">سبد خرید </a>  --}}
+                                        
+                                                <a class="go_cart" href="{{route('order.verify')}}" >سبد خرید </a>
+                                            
                                                 <a class="go_checkout" href="checkout.html">باز بینی </a>
                                             </div>
                                         </div>
@@ -736,7 +741,7 @@
                                                             <a href="single-product-v3.html">تنها محصول V3</a>
                                                         </li>
                                                         <li>
-                                                            <a href="cart.html">سبد خرید </a>
+                                                            <a href="{{route('payment.verify')}}">سبد خرید </a>
                                                         </li>
                                                         <li>
                                                             <a href="checkout.html">بازبینی سفارش</a>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 
 use App\Models\Package;
-
+use App\Models\Order;
 use App\Traits\Categorizable;
 use Carbon\Carbon;
 
@@ -123,5 +123,11 @@ class Files extends Model
           return $this->hasMany(Comment::class);
 
           
+    } 
+
+    public function orders(){
+
+        return $this->belongsToMany(Order::class);
+
     }
 }

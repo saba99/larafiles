@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Files;
+use App\Models\Order;
 use App\User; 
 
 use App\Models\Category;
@@ -63,5 +64,8 @@ class Package extends Model
 
         return $this->hasMany(Comment::class);
     }
-    
+    public function orders(){
+
+        return $this->belongsToMany(Order::class);
+    }
 }

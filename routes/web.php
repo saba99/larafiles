@@ -94,6 +94,11 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     Route::delete('comments/{id}', 'CommentController@destroy')->name('admin.comments.destroy');
 
 
+    //ORDERS 
+
+    Route::get('orders', 'OrderController@index')->name('admin.orders.index');
+
+
 
 });
 
@@ -201,6 +206,16 @@ Route::post('comments/store/{package_id}', 'CommentController@store')->name('com
 
     Route::post('/remove-item/{id}','CartController@removeItem')->name('cart.remove');
 
+    Route::get('cart-view/{id}', 'CartController@view')->name('cart.view');
+
+
+    //ORDERS 
+
+    Route::match(['get','post'],'order-verify', 'OrderController@verify')->name('order.verify');
+
+//PAYMENT ZARRIN PAL 
+
+Route::get('payment-verify/{id?}','PaymentController@verify')->name('payment.verify');
 
 });
 Auth::routes();

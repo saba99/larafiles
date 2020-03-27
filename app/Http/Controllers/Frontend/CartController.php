@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Package;
+use App\Models\Plan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -52,5 +53,11 @@ class CartController extends Controller
 
         return back();
 
+   }  
+
+   public function view(Request $request,$id){
+    
+$plan=Plan::findOrFail($id);
+     return view('frontend.cart.view',compact(['plan']));
    }
 }

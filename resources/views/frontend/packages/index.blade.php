@@ -692,16 +692,16 @@
                                 </li>
                             </ul>
                             <!-- end /.pricing-options -->
-                                      @if(App\Utility\User::is_user_subscribed($current_user))  
+                                      {{--  @if(App\Utility\User::is_user_subscribed($current_user))    --}}
                             <div class="purchase-button">
                                 
                                 <a href="{{route('frontend.packages.download',[$package_item->id])}}" class="btn btn--lg btn--round">دانلود فایل</a>
                                   <a  data-fid="{{$package_item->id}}" class=" btn-warning btn btn--lg btn--round btn_report_file">گزارش خطا </a>
-                                 @else 
+                                 {{--  @else   --}}
                                 <a href="{{route('frontend.plans.index',[$package_item->id])}}" class="btn btn--lg btn--round cart-btn">
                                     <span class="lnr lnr-cart"></span> افزودن به سبد خرید  </a>
                             </div> 
-                             @endif  
+                             {{--  @endif    --}}
                         
                             <!-- end /.purchase-button -->
                         </div>
