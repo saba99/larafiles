@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Address;
 use App\Models\Payment;
 use App\Models\Subscribe;
 use App\Models\Package;
@@ -76,9 +77,15 @@ class User extends Authenticatable
        return $this->subscribes()->where('subscribe_expired_at','>=',Carbon::now()); 
     } 
 
-    public function order(){
+    public function orders(){
 
-        return $this->belongsTo(Order::class);
+        return $this->hasMany(Order::class);
     }
+
+    public function addresses()
+    {
+
+        return $this->hasMany(Address::class);
+    } 
     
 }

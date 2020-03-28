@@ -9,12 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests\Frontend\LoginRequest;
 use App\Jobs\SendEmailNotify;
+use App\Models\Address;
 use App\Models\Support;
+use App\Models\City;
+use App\Models\Province;
 use Carbon\Carbon;
 //use Laravel\Socialite\Facades\Socialite;
 
 //use  Socialite;
 use App\User;
+
 
 
 class UsersController extends Controller
@@ -148,6 +152,44 @@ class UsersController extends Controller
         return redirect()->back()->with('success-support', 'نظر شما با موفقیت به پشتیبانی ارسال شد ');
 
 
+    } 
+
+    public function showInfo(){ 
+
+        $city=City::all();
+        $province=Province::all();
+
+        return view('frontend.users.info',compact(['city','province']));
+    }
+
+    public function info(Request $request){
+
+
+        //dd($request->all());
+        $userInfo =new User();
+
+        $userInfo->name=$request->input('name');
+        $userInfo->email = $request->input('email');
+
+        $userInfo->save();
+
+        $userAddress=new Address();
+
+        $userAddress->address=$request->input('address');
+
+        $userAddress->city=$request->input('city');
+
+        $userAddress->country = $request->input('country');
+
+        $userAddress->post_code = $request->input('post_code');
+
+        $userAddress->province = $request->input('province');
+         
+        $userAddress->user_id=Auth::user()->id;
+
+        $userAddress->save();
+
+        
     }
     
 }

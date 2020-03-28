@@ -97,6 +97,7 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     //ORDERS 
 
     Route::get('orders', 'OrderController@index')->name('admin.orders.index');
+    Route::get('orders/lists/{id}', 'OrderController@getOrderLists')->name('orders.lists');
 
 
 
@@ -145,6 +146,11 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
     Route::get('account/register', 'UsersController@register')->name('account.register');
     Route::post('account/register', 'UsersController@doRegister')->name('account.post.register');
     Route::get('account/logout', 'UsersController@logout')->name('account.logout');
+
+
+    //USERS INFO 
+    Route::get('user-info', 'UsersController@showInfo')->name('user.info');
+    Route::post('user-info/post', 'UsersController@info')->name('users.post.info');
 
     //SOCIAL AUTH 
      Route::get('social-login/{provider}','UsersController@redirectToProvider')->name('social-login.redirect');
@@ -213,9 +219,15 @@ Route::post('comments/store/{package_id}', 'CommentController@store')->name('com
 
     Route::match(['get','post'],'order-verify', 'OrderController@verify')->name('order.verify');
 
+    
 //PAYMENT ZARRIN PAL 
 
 Route::get('payment-verify/{id?}','PaymentController@verify')->name('payment.verify');
+
+//INVOICES
+
+Route::get('invoices','InvoiceController@index')->name('invoices.index');
+    Route::get('invoices/{id}', 'InvoiceController@invoice')->name('invoices.lists');
 
 });
 Auth::routes();

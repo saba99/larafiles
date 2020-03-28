@@ -4,7 +4,8 @@
     <td>{{$book->id}}</td>
     <td>{{$book->title}}</td>
     <td>{{$book->path}}</td>
-    <td><img src="{{url('/upload/images').'/'.$book->image}}" class="img-responsive"></td>
+    {{-- <td><img src="{{url('upload/images').'/'.$book->image}}" class="img-responsive"></td> --}}
+    <td><img src="{{$book->image}}"></td>
     <td>{{$book->type}}</td>
     <td>{{$book->description}}</td>
     <td>{{$book->price}}</td>

@@ -1,7 +1,7 @@
 <tr>
 
     
-    <td>{{$order->id}}</td>
+    <td><a href="{{route('orders.lists',['id'=>$order->id])}}">{{$order->id}}</a></td>
     
     <td>{{$order->amount}}</td>
     <td>{{$order->packages()->get()->count()}}</td>
@@ -15,13 +15,13 @@
     <td class="text-center">
       
        
-        <a href="{{route('admin.packages.delete',$order->id)}}">
+        {{-- <a href="{{route('admin.orders.delete',$order->id)}}"> --}}
 
     
    <ion-icon name="trash-outline"></ion-icon>
 </a>
 
-<a href="{{route('admin.orders.delete',$package->id)}}">
+{{-- <a href="{{route('admin.orders.delete',$order->id)}}"> --}}
 
     <button type="submit" class="btn btn-danger">حذف</button>
    <ion-icon name="document-outline"></ion-icon>

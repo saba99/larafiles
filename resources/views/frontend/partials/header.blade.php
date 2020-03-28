@@ -801,7 +801,7 @@
                                                             <a href="dashboard-statement.html">بیانیه ها</a>
                                                         </li>
                                                         <li>
-                                                            <a href="invoice.html">صورتحساب</a>
+                                                    <a href="{{route('invoices.index')}}">صورتحساب</a>
                                                         </li>
                                                         <li>
                                                             <a href="dashboard-upload.html"> آپلود فایل

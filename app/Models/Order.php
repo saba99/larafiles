@@ -13,7 +13,7 @@ class Order extends Model
 {
    public function packages(){
 
-    return $this->belongsToMany(Package::class);
+    return $this->belongsToMany(Package::class)->withPivot('qty');
    }
     public function files()
     {
@@ -21,13 +21,16 @@ class Order extends Model
         return $this->belongsToMany(Files::class);
     } 
 
-    public function users(){
+    public function user(){
 
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     } 
 
     public function payment(){
 
         return $this->hasOne(Payment::class);
-    }
+    }  
+
+
+    
 }
