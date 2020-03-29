@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Files;
+use App\User;
 
 use App\Models\Package;
 
@@ -27,5 +28,10 @@ class Comment extends Model
     public function replies(){
 
         return $this->hasMany(Comment::class,'parent_id');
+    } 
+
+    public function user(){
+
+        return $this->belongsTo(User::class);
     }
 }

@@ -5,10 +5,13 @@ namespace App;
 use App\Models\Address;
 use App\Models\Payment;
 use App\Models\Subscribe;
+use App\Models\Comment;
 use App\Models\Package;
 use App\Models\Order;
 use App\Models\Plan;
+use App\Models\Post;
 use Carbon\Carbon;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -87,5 +90,15 @@ class User extends Authenticatable
 
         return $this->hasMany(Address::class);
     } 
+
+    public function comments(){
+
+        return $this->hasMany(Comment::class);
+    } 
+
+    public function posts(){
+
+        return $this->hasMany(Post::class);
+    }
     
 }

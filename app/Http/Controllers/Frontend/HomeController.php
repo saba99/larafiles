@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Files;
 use App\Models\Package;
 use Carbon\Carbon;
@@ -25,6 +26,9 @@ class HomeController extends Controller
 
         $packages = Package::all();
 
+        $Comments = Comment::with('package')->get();
+       
+
         ($package_user=Package::with('users')->get()->toArray());
                      
               
@@ -36,7 +40,7 @@ class HomeController extends Controller
                  
         ($file  = Files::pluck('file_name', 'id')->first());
 
-        return view('frontend.home.index',compact(['files','packages', 'latestFiles', 'package_file', 'package_user', 'latestPackages']));
+        return view('frontend.home.index',compact(['files','packages', 'latestFiles', 'package_file', 'package_user', 'latestPackages','Comments']));
     }
 
     public function details(Request $request, $package_id)

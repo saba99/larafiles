@@ -1426,6 +1426,7 @@ START TESTIMONIAL
         <!-- start row -->
         <div class="row">
             <!-- start col-md-12 -->
+           
             <div class="col-md-12">
                 <div class="section-title">
                     <h1>
@@ -1444,26 +1445,26 @@ START TESTIMONIAL
             <!-- start .col-md-12 -->
             <div class="col-md-12">
                 <div class="testimonial-slider">
+                    @foreach($Comments as $comment)
                     <div class="testimonial">
                         <div class="testimonial__about">
                             <div class="avatar v_middle">
                                 <img src="assets/images/new/test1.jpg" alt="Testimonial Avatar">
-                            </div>
+                            </div>                {{--{{$comment->package[0]->package_title}}--}}
                             <div class="name-designation v_middle">
-                                <h4 class="name">کاربر تست </h4>
-                                <span class="desig">طراح محصویل </span>
+                                <h4 class="name"> کاربر</h4>
+                                <span class="desig">طراح محصول </span>
                             </div>
                             <span class="lnr lnr-bubble quote-icon"></span>
                         </div>
                         <div class="testimonial__text">
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
-                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
-                                فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                            <p>{{$comment->description}} </p>
                         </div>
                     </div>
+                    @endforeach
                     <!-- end /.testimonial -->
 
-                    <div class="testimonial">
+                    {{-- <div class="testimonial">
                         <div class="testimonial__about">
                             <div class="avatar v_middle">
                                 <img src="assets/images/new/test2.jpg" alt="Testimonial Avatar">
@@ -1516,7 +1517,7 @@ START TESTIMONIAL
                                 است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
                                 فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- end /.testimonial -->
 
 

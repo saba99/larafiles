@@ -116,6 +116,33 @@
             <li><a href="{{route('admin.orders.index')}}"><i class="fa fa-circle-o"></i>لیست سفارشات</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>مطالب</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('posts.index')}}"><i class="fa fa-circle-o"></i> لیست مطالب</a></li>
+          
+           <li><a href="{{route('posts.create')}}"><i class="fa fa-circle-o"></i> افزودن مطلب </a></li>
+          
+          
+          </ul>
+        </li>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>دسته بندی مطالب</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('categories.index')}}"><i class="fa fa-circle-o"></i> لیست دسته بندی مطالب</a></li>
+          
+           <li><a href="{{route('categories.create')}}"><i class="fa fa-circle-o"></i> افزودن دسته بندی مطالب </a></li>
+          
+          
+          </ul>
+        </li>
         </li>
          <li class="treeview">
           <a href="#">

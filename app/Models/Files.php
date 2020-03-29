@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Package;
 use App\Models\Order;
+use App\Models\Post;
 use App\Traits\Categorizable;
 use Carbon\Carbon;
 
@@ -130,4 +131,8 @@ class Files extends Model
         return $this->belongsToMany(Order::class);
 
     }
+   public function posts(){
+
+    return $this->hasMany(Post::class);
+   }
 }

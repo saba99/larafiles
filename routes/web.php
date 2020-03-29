@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use App\Notifications\testcompleted;
+
 Auth::routes();
 
 
@@ -99,6 +102,14 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     Route::get('orders', 'OrderController@index')->name('admin.orders.index');
     Route::get('orders/lists/{id}', 'OrderController@getOrderLists')->name('orders.lists');
 
+
+    //BLOG POSTS
+    
+    Route::resource('posts', 'PostController');
+
+    //BLOG  CATEGORIES 
+
+    Route::resource('blog-categories', 'BlogCategoryController');
 
 
 });
@@ -228,6 +239,11 @@ Route::get('payment-verify/{id?}','PaymentController@verify')->name('payment.ver
 
 Route::get('invoices','InvoiceController@index')->name('invoices.index');
     Route::get('invoices/{id}', 'InvoiceController@invoice')->name('invoices.lists');
+
+ //NOTIFY 
+ 
+
+
 
 });
 Auth::routes();

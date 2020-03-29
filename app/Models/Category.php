@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Package;
 
+use App\Models\Post;
 class Category extends Model
 {
     protected $table='categories';
@@ -29,6 +30,10 @@ class Category extends Model
 
         return $this->morphedByMany(Files::class, 'categorizable');
     }
+PUBLIC FUNCTION posts(){
 
+return $this->hasMany(Post::class);
+
+}
 
 }

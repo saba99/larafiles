@@ -57,7 +57,7 @@ class FilesController extends Controller
          }
          
 
-      dd($file_item=Files::findOrFail($file_id));
+      ($file_item=Files::findOrFail($file_id));
 
       if(!$file_item){
 
