@@ -130,7 +130,7 @@
           </ul>
         </li>
         </li>
-        <li class="treeview">
+        {{-- <li class="treeview">
           <a href="#">
             <i class="fa fa-folder"></i> <span>دسته بندی مطالب</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -142,7 +142,7 @@
           
           
           </ul>
-        </li>
+        </li> --}}
         </li>
          <li class="treeview">
           <a href="#">
@@ -152,6 +152,18 @@
           <ul class="treeview-menu">
             <li><a href="{{route('admin.comment.index')}}"><i class="fa fa-circle-o"></i> لیست نظرات</a></li>
           
+          
+          
+          </ul>
+        </li>
+           <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>رسانه ها</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('photos.index')}}"><i class="fa fa-circle-o"></i> لیست فایل ها</a></li>
+            <li><a href="{{route('photos.create')}}"><i class="fa fa-circle-o"></i>آپلود فایل ها </a></li>
           
           
           </ul>

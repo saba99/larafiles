@@ -858,7 +858,7 @@
                                                             <a href="blog1.html">وبلاگ V-1</a>
                                                         </li>
                                                         <li>
-                                                            <a href="blog2.html">وبلاگ V-2</a>
+                                                            <a href="{{route('blog.index')}}">وبلاگ V-2</a>
                                                         </li>
                                                         <li>
                                                             <a href="single-blog.html">صفحه پست</a>

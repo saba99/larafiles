@@ -111,7 +111,12 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
 
     Route::resource('blog-categories', 'BlogCategoryController');
 
+    //BLOG UPLOAD 
 
+    //Route::get('photos/upload', 'PhotoController@upload')->name('photos.upload');
+    Route::resource('photos', 'PhotoController');
+    
+  
 });
 
 
@@ -240,10 +245,15 @@ Route::get('payment-verify/{id?}','PaymentController@verify')->name('payment.ver
 Route::get('invoices','InvoiceController@index')->name('invoices.index');
     Route::get('invoices/{id}', 'InvoiceController@invoice')->name('invoices.lists');
 
- //NOTIFY 
- 
+    //NOTIFY 
 
 
+    //Blog FRONTEND 
+
+    Route::get('blog', 'BlogController@index')->name('blog.index');
+    Route::get('single-blog/{slug}', 'BlogController@single')->name('single.blog');
+
+    Route::get('search/{query}','BlogController@searchTitle')->name('posts.search');
 
 });
 Auth::routes();
