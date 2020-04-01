@@ -200,12 +200,12 @@
 
                     <div class="comment___wrapper">
                         <ul class="media-list">
-                            {{-- @foreach($comments as $comment) --}}
+                             @foreach($comments as $comment)
                             <li class="depth-1">
                                 <div class="media">
                                     <div class="pull-right no-pull-xs">
                                         <a href="#" class="cmnt_avatar">
-                                            <img src="images/new/comavatar.jpg" class="media-object" alt="Sample Image">
+                                            <img src="/assets/images/new/comavatar.jpg" class="media-object" alt="Sample Image">
                                         </a>
                                     </div>
                                     <div class="media-body" >
@@ -219,7 +219,7 @@
                                             <a href="#" class="reply hidden-xs-m pull-left">پاسخ </a>
                                         </div>
                                         <p>
-
+                                     {{$comment->description}}
                                         </p>
                                         <a href="#" class="reply visible-xs-m  pull-left">پاسخ </a>
                                     </div>
@@ -231,7 +231,7 @@
                                         <div class="media">
                                             <div class="pull-right no-pull-xs">
                                                 <a href="#" class="cmnt_avatar">
-                                                    <img src="images/new/comavatar2.jpg" class="media-object" alt="Sample Image">
+                                                    <img src="/assets/images/new/comavatar2.jpg" class="media-object" alt="Sample Image">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -246,7 +246,7 @@
                                                         پاسخ
                                                     </a>
                                                 </div>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                                <p>{{$comment->description}}
 
                                                 </p>
                                                 <a href="#" class="reply visible-xs-m pull-left">پاسخ </a>
@@ -256,7 +256,7 @@
                                 </ul>
                             </li>
 
-                           {{-- @endforeach --}}
+                            @endforeach 
                         </ul>
                     </div>
                     <!-- end /.comment___wrapper -->
@@ -271,21 +271,12 @@
                     <div class="commnet_form_wrapper">
                         <div class="row">
                             <!-- start form -->
-                            <form class="cmnt_reply_form" action="#" method="post">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="input_field" type="text" placeholder="نام " required="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="input_field" type="email" placeholder="ایمیل " required="">
-                                    </div>
-                                </div>
-
+                            <form class="cmnt_reply_form" action="{{route('post.comment',$comment->id)}}" method="post">
+                               @csrf
+                               <input type="hidden" name="package_id" >
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="input_field" name="name" placeholder="متن خود را بنویسید " rows="10" cols="80"></textarea>
+                                        <textarea class="input_field" name="description" placeholder="متن خود را بنویسید " rows="10" cols="80"></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn--round btn--default" name="btn">ثبت نظر </button>

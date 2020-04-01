@@ -88,6 +88,9 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     //BOOKS 
     Route::resource('/books', 'BookController');
 
+    //VIDEOS
+    Route::resource('/videos', 'VideoController');
+
 
     //COMMENTS 
     Route::get('/comments','CommentController@index')->name('admin.comment.index');
@@ -107,16 +110,18 @@ Route::group(['prefix'=> 'administrator','namespace'=>'Backend','middleware'=>'a
     
     Route::resource('posts', 'PostController');
 
-    //BLOG  CATEGORIES 
-
-    Route::resource('blog-categories', 'BlogCategoryController');
 
     //BLOG UPLOAD 
 
     //Route::get('photos/upload', 'PhotoController@upload')->name('photos.upload');
     Route::resource('photos', 'PhotoController');
-    
-  
+
+    //TICKETS
+    Route::get('new_ticket', 'TicketsController@create')->name('tickets.create');
+    Route::post('new_ticket', 'TicketsController@store')->name('tickets.save');
+
+    Route::get('my_tickets', 'TicketsController@userTickets')->name('tickets.show');
+    Route::get('tickets/{ticket_id}', 'TicketsController@show');
 });
 
 
@@ -163,10 +168,16 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
     Route::post('account/register', 'UsersController@doRegister')->name('account.post.register');
     Route::get('account/logout', 'UsersController@logout')->name('account.logout');
 
+    //RECAPTCHA 
+    Route::get('recaptchacreate', 'RecaptchaController@create');
+    Route::post('store', 'RecaptchaController@store');
+
+    Route::get('refreshcaptcha', 'UsersController@refreshCaptcha');
 
     //USERS INFO 
     Route::get('user-info', 'UsersController@showInfo')->name('user.info');
     Route::post('user-info/post', 'UsersController@info')->name('users.post.info');
+
 
     //SOCIAL AUTH 
      Route::get('social-login/{provider}','UsersController@redirectToProvider')->name('social-login.redirect');
@@ -254,6 +265,11 @@ Route::get('invoices','InvoiceController@index')->name('invoices.index');
     Route::get('single-blog/{slug}', 'BlogController@single')->name('single.blog');
 
     Route::get('search/{query}','BlogController@searchTitle')->name('posts.search');
+
+
+    Route::post('post-comment/{id}', 'BlogController@postComment')->name('post.comment');
+
+    
 
 });
 Auth::routes();

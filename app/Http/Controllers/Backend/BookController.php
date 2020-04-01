@@ -86,6 +86,23 @@ class BookController extends Controller
 
         return redirect('administrator/books/create');
 
+    }  
+    public function uploadImag(Request $request){
+          if ($files = $request->file('image')) {
+    // Define upload path
+    $destinationPath = public_path('/images/'); // upload path
+    // Upload Original Image           
+    $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
+    $files->move($destinationPath, $profileImage);
+
+    $insert['image'] = "$profileImage";
+    // Save In Database
+    $imagemodel = new Book();
+    $imagemodel->image = "$profileImage";
+    $imagemodel->save();
+}
+return back()->with('success', 'Image Upload successfully');
+
     }
 
     /**
@@ -107,7 +124,9 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bookItem=Book::findOrFail($id);
+
+        return view('admin.books.edit',compact(['bookItem']));
     }
 
     /**
@@ -119,7 +138,27 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $book=Book::findOrFail($id);
+     //$book->update($request->all());
+
+        $file = $request->file('image');
+        if ($request->hasFile('image')) {
+            ($imageUrl = $this->uploadImage($file));
+        } else {
+            $imageUrl = $request->image;
+        }
+        $file1 = $request->file('path');
+        if ($request->hasFile('path')) {
+           ($sourceUrl = $this->uploadSource($file1));
+        } else {
+            $sourceUrl = $request->path;
+        }
+        $book->update(array_merge($request->all(), ['image' => $imageUrl], ['path' => $sourceUrl]));
+       
+
+     return redirect('/administrator/books');
+
+        
     }
 
     /**
@@ -130,25 +169,29 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }  
+        $books=Book::findOrFail($id);
 
-private function uploadImage($file){
+        $books->delete();
 
-
-//$year=Carbon::now()->year;
-$imagePath="\upload\images";
-
-if($filename=$file->getClientOriginalName()){ 
-
-
-  $fileType=time().'.'.$file->getClientMimeType();
-  $file=$file->move(public_path($imagePath,$filename));
-   return $filename; 
-}
-
-
-
-
+        return back();
     }
+
+    private function uploadImage($file)
+    {
+        $imagePath = "\upload\images";
+        $filename = time() . '.' . $file->getClientOriginalName();
+        $file = $file->move(public_path($imagePath), $filename);
+        return $filename;
+    }
+
+    private function uploadSource($file1)
+    {
+
+        $sourcePath = "\upload\sources";
+        $filename1 =  time() . '.' . $file1->getClientOriginalName();
+        $file1 = $file1->move(public_path($sourcePath), $filename1);
+        return $filename1;
+    }
+
+ 
 }

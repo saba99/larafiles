@@ -42,7 +42,7 @@ class FilesController extends Controller
     public function download(Request $request,$file_id){
       
 
-         $current_user=Auth::user();
+         ($current_user=Auth::user());
          /*if(!User::is_user_subscribed($user)){
 
             // abort(404);
@@ -51,8 +51,6 @@ class FilesController extends Controller
         if(!\App\utility\File::user_can_download($current_user->id)){
 
             return redirect('frontend.files.access');
-
-
 
          }
          

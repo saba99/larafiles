@@ -38,6 +38,10 @@ class Comment extends Model
     {
         return $this->hasMany(Post::class);
     }
-   
+
+    public function ticket()
+    {
+        return $this->belongsTo(Ticket::class);
+    }
 
 }

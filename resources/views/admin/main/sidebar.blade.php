@@ -180,6 +180,30 @@
           
           </ul>
         </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>تیکت ها </span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('tickets.show')}}"><i class="fa fa-circle-o"></i> لیست تیکت ها</a></li>
+          
+            <li><a href="{{route('tickets.create')}}"><i class="fa fa-circle-o"></i> افزودن تیکت ها</a></li>
+          
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>ویدیو ها </span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('videos.index')}}"><i class="fa fa-circle-o"></i> لیست ویدیو ها</a></li>
+          
+            <li><a href="{{route('videos.create')}}"><i class="fa fa-circle-o"></i> افزودن ویدیو ها</a></li>
+          
+          </ul>
+        </li>
        
       </ul>
     </section>

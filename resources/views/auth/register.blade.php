@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+
+@section('head')
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+@endsection 
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -60,6 +66,17 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                   <div class="col-md-6 offset-md-4">
+                   <div class="g-recaptcha" data-sitekey="{{ env('CAPTCHA_SITE_KEY') }}"></div>
+                    @if ($errors->has('g-recaptcha-response'))
+                      <span class="invalid-feedback" style="display: block;">
+                       <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                       </span>
+                   @endif
+                          </div>
+                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

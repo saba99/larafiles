@@ -12,6 +12,8 @@
                 <div class="col-md-12 col-md-offset-3">
 <form action="{{route('books.update',$bookItem->id)}}" method="post">
 
+   {{method_field('PATCH')}}
+
 @csrf
 
 <div class="row">
@@ -31,18 +33,22 @@
 
    <lable for="price">قیمت:</lable>
    
-   <input type="text" class="form-control" name="price"  value="{{old('name',isset($bookItem) ? $bookItem->price : '')}}">
+   <input type="text" class="form-control" name="price"  value="{{old('price',isset($bookItem) ? $bookItem->price : '')}}">
 </div>  
  <div class="form-group">
 
    <lable for="file">فایل:</lable>
    
-   <input type="file" class="form-control" name="file"  value="{{old('name',isset($bookItem) ? $bookItem->path : '')}}">
+   <input type="file" class="form-control" name="path"  value="{{old('path',isset($bookItem) ? $bookItem->path : '')}}">
+   <input type="hidden" name="path"  value="{{$bookItem->path}}">
+
 </div>  
- 
+ <div class="form-group">
 <lable for="file">تصویر:</lable>
    
-   <input type="file" class="form-control" name="file"  value="{{old('name',isset($bookItem) ? $bookItem->image : '')}}">
+   <input type="file" class="form-control" name="image"  value="{{old('image',isset($bookItem) ? $bookItem->image : '')}}">
+
+   <input type="hidden" name="path"  value="{{$bookItem->image}}">
 </div>  
  
  <div class="form-group">

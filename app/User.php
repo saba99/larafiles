@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\Plan;
 use App\Models\Post;
 use Carbon\Carbon;
+use App\Models\Ticket;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -99,6 +100,11 @@ class User extends Authenticatable
     public function posts(){
 
         return $this->hasMany(Post::class);
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
     }
     
 }

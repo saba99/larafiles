@@ -114,6 +114,20 @@
                                     </label>
                                 </div>
                             </div>
+                           
+          <div class="row">
+          <div class="form-group col-md-6">
+             <div class="captcha">
+               <span>{!! captcha_img() !!}</span>
+               <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
+               </div>
+            </div>
+        
+       
+          
+            <div class="form-group  col-md-6">
+             <input id="captcha" type="text" class="form-control" placeholder="کد امنیتی تصویر را وارد نمایید" name="captcha"></div>
+        
 
                             <button class="btn btn--md btn--round" type="submit">ورود </button>
                              <a href="{{route('social-login.redirect','github')}}" class="btn btn--md  btn-warning btn--round" type="submit">ورود با گیت هاب </a>
@@ -132,6 +146,7 @@
                     <!-- end .cardify -->
                 </form>
             </div>
+        </div>
             <!-- end .col-md-6 -->
         </div>
         <!-- end .row -->

@@ -56,6 +56,7 @@ END FOOTER AREA
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"></script>
 <!-- inject:js -->
 <script src="{{asset('assets/js/vendor/jquery/jquery-1.12.3.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/captcha.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery/popper.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery/uikit.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>

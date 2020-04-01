@@ -52,12 +52,7 @@ class PackagesController extends Controller
 
         $user = Auth::user()->id;
        
-        /*if(!User::is_user_subscribed($user)){
-
-            // abort(404);
-            return redirect('frontend.files.access');
-         }*/
-        if (!\App\utility\File::user_can_download($user)) {
+              if (!\App\utility\File::user_can_download($user)) {
 
             return redirect('frontend.files.access');
         }

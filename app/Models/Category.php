@@ -36,4 +36,9 @@ return $this->hasMany(Post::class);
 
 }
 
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
 }

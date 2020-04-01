@@ -14,6 +14,7 @@ use App\Models\Support;
 use App\Models\City;
 use App\Models\Province;
 use Carbon\Carbon;
+use GuzzleHttp\Psr7\Request as GuzzleRequest;
 //use Laravel\Socialite\Facades\Socialite;
 
 //use  Socialite;
@@ -191,5 +192,9 @@ class UsersController extends Controller
 
         
     }
-    
+    public function refreshCaptcha()
+    {
+        return response()->json(['captcha' => captcha_img()]);
+    }
 }
+    

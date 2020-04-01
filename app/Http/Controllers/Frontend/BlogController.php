@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\Package;
 use Illuminate\Http\Request;
 
 use App\Models\Post;
@@ -32,7 +33,7 @@ class BlogController extends Controller
 
         $category = Category::all();
 
-        ($comments=Comment::with('user')->first());
+        ($comments=Comment::with('user')->get());
 
         return view('frontend.weblog.single',compact(['posts','category','newPosts','comments']));
     }
@@ -48,5 +49,21 @@ class BlogController extends Controller
 
         return view('frontend.weblog.single', compact(['posts', 'category', 'newPosts', 'comments','query']));
 
+    }
+
+    public function postComment(Request $request, $packageId){
+
+
+        $newComment= new Comment();
+
+        //$package=Package::findOrFail($id);
+
+        $newComment->description=$request->input('description');
+
+        $newComment->package_id=$packageId;
+
+        $newComment->save();
+
+        return back();
     }
 }
