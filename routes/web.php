@@ -184,6 +184,9 @@ Route::group(['namespace'=>'Frontend','middleware'=>'last_activity'], function (
 
      Route::get('social-login/{provider}/callback','UsersController@handelProviderCallback')->name('social-login.callback');
 
+     
+
+
     //USERS DASHBOARD
 
     Route::get('/dashboard','DashboardController@index')->name('user.dashboard');
@@ -269,9 +272,69 @@ Route::get('invoices','InvoiceController@index')->name('invoices.index');
 
     Route::post('post-comment/{id}', 'BlogController@postComment')->name('post.comment');
 
-    
+    //UPLOAD 
+    Route::get('/file-upload','UploadController@index')->name('file.upload');
+
+    //DASHBOARD
+
+    Route::get('dash-settings','DashboardController@index')->name('dash-settings');
+    Route::post('dash-settings/dropzone', 'DashboardController@dropzone')->name('profile.dropzone');
+    Route::post('dash-settings/post', 'DashboardController@upload')->name('profile.upload');
+    //USER PROFILE 
+
+    //TICKETS 
+    Route::get('tickets/new', 'TicketController@new')->name('ticket.new');
+
+    Route::post('tickets', 'TicketController@create')->name('ticket.create');
+
+    Route::get('tickets/index', 'TicketController@index')->name('ticket.index');
+
+    Route::get('tickets/{ticket}', 'TicketController@show')->name('ticket.show');
+
+    Route::post('tickets/{ticket}/reply', 'ReplyController@create')->name('reply.create');
+
+    Route::get('tickets/{ticket}/close', 'TicketController@close')->name('ticket.close');
+
+
+    //POINT 
+    Route::get('topic/new', 'TopicController@new')->name('topic.new');
+
+    Route::post('topic', 'TopicController@store')->name('topic.store');
+
+
+    Route::get('topics', 'TopicController@index')->name('topics');
+
+    Route::get('topic/{topic}', 'TopicController@show')->name('topic.show');
+
+
+    Route::post('topic/{topic}/reply', 'ReplyPointController@store')->name('reply.store');
+
+    Route::get('badge/new', 'BadgeController@new')->name('badge.new');
+
+    Route::post('badge/new', 'BadgeController@store')->name('badge.store');
+//search 
+
+Route::post('/search','HomeController@search')->name('search');
+
+//CHAT
+Route::get('chat','chatController@index')->name('chat');
+
+//RATING 
+
+Route::post('rating','RatingController@rating')->name('rating');
 
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//GITHUB LOGIN 
+
+Route::get('/sign-in/github', 'Auth\LoginController@github');
+
+Route::get('/sign-in/github/redirect', 'Auth\LoginController@githubRedirect');
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});

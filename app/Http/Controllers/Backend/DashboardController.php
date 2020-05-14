@@ -26,5 +26,7 @@ class DashboardController extends Controller
         //return view('admin.dashboard.index',compact(['panel_title','results', 'download_statistics']));
       return view('admin.dashboard.chart' , compact(['panel_title', 'results', 'download_statistics']));
 
-    }
+    }  
+
+    
 }

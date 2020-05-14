@@ -353,7 +353,7 @@
                                             <span class="lnr lnr-user"></span>پروفایل </a>
                                     </li>
                                     <li>
-                                        <a href="dashboard.html">
+                                        <a href="{{route('dash-settings')}}">
                                             <span class="lnr lnr-home"></span>داشبورد</a>
                                     </li>
                                     <li>
@@ -459,7 +459,7 @@
                                     </li>
                                     <li>
                                         <a href="dashboard.html">
-                                            <span class="lnr lnr-home"></span>داشبورد</a>
+                                            <span class="{{route('dash-settings')}}"></span>داشبورد</a>
                                     </li>
                                     <li>
                                         <a href="{{route('send-email')}}">
@@ -467,7 +467,7 @@
                                     </li>
                                     <li>
                                         <a href="cart.html">
-                                            <span class="lnr lnr-cart"></span>خرید ها</a>
+                                            <span class=""></span>خرید ها</a>
                                     </li>
                                     <li>
                                         <a href="favourites.html">
@@ -483,7 +483,7 @@
                                     </li>
                                     <li>
                                         <a href="dashboard-upload.html">
-                                            <span class="lnr lnr-upload"></span>آپلود ایتم </a>
+                                            <span class="{{route('file.upload')}}"></span>آپلود ایتم </a>
                                     </li>
                                     <li>
                                         <a href="dashboard-manage-item.html">
@@ -789,7 +789,7 @@
                                                             <a href="dashboard.html">داشبورد</a>
                                                         </li>
                                                         <li>
-                                                            <a href="dashboard-setting.html">تنظیمات حساب</a>
+                                                            <a href="{{route('dash-settings')}}">تنظیمات حساب</a>
                                                         </li>
                                                         <li>
                                                             <a href="dashboard-purchase.html">دیگر خریدها </a>

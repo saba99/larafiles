@@ -1,0 +1,4 @@
+<template>
+    <message></message>
+  
+</template>

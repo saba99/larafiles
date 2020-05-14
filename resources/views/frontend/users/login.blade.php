@@ -116,21 +116,32 @@
                             </div>
                            
           <div class="row">
-          <div class="form-group col-md-6">
+          {{-- <div class="form-group col-md-6">
              <div class="captcha">
                <span>{!! captcha_img() !!}</span>
                <button type="button" class="btn btn-success"><i class="fa fa-refresh" id="refresh"></i></button>
                </div>
-            </div>
-        
+            </div> --}}
+         {!! htmlScriptTagJsApi(['lang'=>'fa']) !!}
        
           
-            <div class="form-group  col-md-6">
-             <input id="captcha" type="text" class="form-control" placeholder="کد امنیتی تصویر را وارد نمایید" name="captcha"></div>
-        
+            {{-- <div class="form-group  col-md-6">
+             <input id="captcha" type="text" class="form-control" placeholder="کد امنیتی تصویر را وارد نمایید" name="captcha"></div> --}}
+       <div class="form-group">
 
-                            <button class="btn btn--md btn--round" type="submit">ورود </button>
-                             <a href="{{route('social-login.redirect','github')}}" class="btn btn--md  btn-warning btn--round" type="submit">ورود با گیت هاب </a>
+        <lable for="captcha">تصویر امنیتی</lable>
+ 
+  ...
+    {!! htmlFormSnippet() !!}
+        
+       </div>
+                             <div class="form-group">
+                                <button class="btn btn--md btn--round" type="submit">ورود </button>   
+                             </div>
+                          
+                             {{-- <a href="{{route('social-login.redirect','github')}}" class="btn btn--md  btn-warning btn--round" type="submit">ورود با گیت هاب </a> --}}
+
+                             {{-- <a href="/sign-in/github" class="btn btn--md  btn-warning btn--round" type="submit">ورود با گیت هاب </a> --}}
                             <div class="login_assist">
                                 <p class="recover">
                                     <a href="pass-recovery.html">نام کاربری </a> یا

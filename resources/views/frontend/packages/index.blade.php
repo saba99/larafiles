@@ -395,7 +395,18 @@
                                                                 </a>
                                                                 <span>1 ساعت پیش </span>
                                                             </div>
-                                                            <div class="rating product--rating">
+                                                            <form  method="POST" action="">
+<select >
+
+    <option value=""></option>
+</select>
+
+<button type="submit"></button>
+
+</form>
+
+
+                                                            {{--  <div class="rating product--rating">
                                                                 <ul>
                                                                     <li>
                                                                         <span class="fa fa-star"></span>
@@ -413,7 +424,7 @@
                                                                         <span class="fa fa-star-half-o"></span>
                                                                     </li>
                                                                 </ul>
-                                                            </div>
+                                                            </div>  --}}
                                                             <span class="review_tag">پشتیبانی </span>
                                                         </div>
                                                         <a href="#" class="reply-link">پاسخ </a>
@@ -724,10 +735,36 @@
                                         <span class="lnr lnr-bubble mcolor3"></span>نظرات</p>
                                     <span>35</span>
                                 </li>
+                                 <li>
+                                    <p>
+                                        <span class="lnr lnr-bubble mcolor3"></span>امتیاز ها </p>
+                                    <span>{{$rating}}</span>
+                                </li>
                             </ul>
 
+  @if(!$isRated) 
+  <form  method="POST" action="{{route('rating')}}">
+    @csrf
+    <input type="hidden"  name="package_id" value="{{$package_id}}">
+<select  name="rating"  class="form-control">
 
-                            <div class="rating product--rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<button type="submit" class="btn btn-primary" class="form-control">امتیاز دهی</button>
+
+</form>
+  
+  @endif
+
+
+
+
+                            {{--  <div class="rating product--rating">
                                 <ul>
                                     <li>
                                         <span class="fa fa-star"></span>
@@ -746,7 +783,7 @@
                                     </li>
                                 </ul>
                                 <span class="rating__count">( 26 امتیاز )</span>
-                            </div>
+                            </div>  --}}
                             <!-- end /.rating -->
                         </div>
                         <!-- end /.sidebar-card -->
@@ -882,7 +919,7 @@
                         </div>
                         <!-- end /.product-desc -->
 
-                        <ul class="titlebtm">
+                        {{--  <ul class="titlebtm">
                             <li class="product_cat">
                                 <a href="#">
                                     <span class="lnr lnr-book"></span>افزونه ها </a>
@@ -906,7 +943,19 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul>  --}}
+
+                        <form  method="POST" action="">
+<select >
+
+    <option value=""></option>
+</select>
+
+<button type="submit"></button>
+
+</form>
+
+
 
                         <div class="product-purchase">
                             <div class="price_love">

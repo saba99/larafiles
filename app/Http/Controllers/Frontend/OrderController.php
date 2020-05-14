@@ -59,13 +59,10 @@ class OrderController extends Controller
         $order->save();
 
         $order->packages()->sync($packageId);
-
-
-        //ZARINN PAL 
+           //ZARINN PAL 
         $payment = new Payment($item['item']['package_price'],$order->id);
 
         $result = $payment->doPayment();
-
 
         if ($result->Status == 100) {
 
@@ -73,6 +70,8 @@ class OrderController extends Controller
         } else {
             echo 'ERR: ' . $result->Status;
         }
+
+       
 
 
 

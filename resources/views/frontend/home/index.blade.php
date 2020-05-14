@@ -56,16 +56,20 @@ START HERO AREA
                 <div class="col-sm-12">
                     <!-- start .search_box -->
                     <div class="search_box" >
-                        <form action="{{route('search')}}" method="GET" class="search-form">
-                            <input type="text" name="query" id="query"  class="text_field" placeholder="جستجو در محصولات ...">
+                        <form action="{{route('search')}}" method="post" class="search-form">
+                            @csrf
+                            <input type="text" name="search" id="query"  class="text_field" placeholder="جستجو در محصولات ...">
                             <div class="search__select select-wrap">
-                                <select name="category" class="select--field" id="blah">
-                                    <option value="">همه دسته بندی ها</option>
-                                    <option value="">PSD</option>
-                                    <option value="">HTML</option>
-                                    <option value="">ورد پرس</option>
-                                    <option value="">همه دسته بندی ها</option>
+
+                               
+                                <select name="category_id" class="select--field" id="blah">
+                                  @foreach($categories as $category)
+                                    
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                   
+                                     @endforeach
                                 </select>
+                               
                                 <span class="lnr lnr-chevron-down"></span>
                             </div>
                             <button type="submit" class="search-btn btn--lg">جستجو</button>
@@ -648,7 +652,7 @@ START PRODUCTS AREA
         <!-- end /.row -->
 
         <!-- start .row -->
-        <div class="row">
+       <div class="row">
             <!-- start .col-md-4 -->
             @if($latestPackages && count($latestPackages)>0)
              @foreach($latestPackages as $package)
@@ -673,7 +677,7 @@ START PRODUCTS AREA
                             <li>
                                 <img class="auth-img" src="assets/images/auth.jpg" alt="author image">
                                 <p>                     {{--{{$package->users[0]->name}}--}}
-                                   <a href="#"> </a>
+                                    <a href="#"> </a>
                                 </p>
                             </li>
                             <li class="product_cat">
@@ -702,8 +706,8 @@ START PRODUCTS AREA
                 </div> 
                 
                @endforeach
-               @endif
-            <div class="col-lg-4 col-md-6">
+               @endif 
+            {{-- <div class="col-lg-4 col-md-6">
                
                 <!-- start .single-product -->
                
@@ -748,7 +752,7 @@ START PRODUCTS AREA
                 </div>
             </div>
             <!-- end /.col-md-12 -->
-        </div>
+        </div> --}} 
 <div class="row text-center">
             <!-- start .col-md-4 -->
              @if($latestFiles && count($latestFiles)>0)
@@ -760,7 +764,7 @@ START PRODUCTS AREA
                         <img src="{{asset('/storage/'.$file->file_name)}}" class="img-responsive" alt="Product Image">
                         <div class="prod_btn">
                             <a href="{{route('frontend.files.details',$file->id)}}" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
-                            <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
+                            <a href="{{route('frontend.files.details',$file->id)}}" class="transparent btn--sm btn--round">نمایش </a>
                         </div>
                         <!-- end /.prod_btn -->
                     </div>
@@ -863,9 +867,12 @@ START FOLLOWERS FEED AREA
 
         <!-- start /.row -->
         <div class="row " >
+        <div class="col-md-12">
+               
             <div class="col-md-12">
                 <div class="product_slider dir-rtl " >
                     <!-- start .single-product -->
+                    @foreach($popularPackages as $popularPackage)
                     <div class="product product--card">
 
                         <div class="product__thumbnail">
@@ -880,7 +887,7 @@ START FOLLOWERS FEED AREA
 
                         <div class="product-desc">
                             <a href="#" class="product_title">
-                                <h4>اسکریپ دریا </h4>
+                                <h4>{{$popularPackage->package_title}} </h4>
                             </a>
                             <ul class="titlebtm">
                                 <li>
@@ -915,58 +922,12 @@ START FOLLOWERS FEED AREA
                         </div>
                         <!-- end /.product-purchase -->
                     </div>
+
+                    @endforeach
                     <!-- end /.single-product -->
 
                     <!-- start .single-product -->
-                    <div class="product product--card">
-
-                        <div class="product__thumbnail">
-                            <img src="assets/images/new/p2.jpg" alt="Product Image">
-                            <div class="prod_btn">
-                                <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
-                                <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
-                            </div>
-                            <!-- end /.prod_btn -->
-                        </div>
-                        <!-- end /.product__thumbnail -->
-
-                        <div class="product-desc">
-                            <a href="#" class="product_title">
-                                <h4>قالب psd </h4>
-                            </a>
-                            <ul class="titlebtm">
-                                <li>
-                                    <img class="auth-img" src="assets/images/new/auth2.jpg" alt="author image">
-                                    <p>
-                                        <a href="#">دامن دریا </a>
-                                    </p>
-                                </li>
-                                <li class="product_cat">
-                                    <a href="#">
-                                        <span class="lnr lnr-book"></span>افزونه </a>
-                                </li>
-                            </ul>
-
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
-                                است.</p>
-                        </div>
-                        <!-- end /.product-desc -->
-
-                        <div class="product-purchase">
-                            <div class="price_love">
-                                <span>10 تومان</span>
-                                <p>
-                                    <span class="lnr lnr-heart"></span> 48</p>
-                            </div>
-                            <div class="sell">
-                                <p>
-                                    <span class="lnr lnr-cart"></span>
-                                    <span>50</span>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- end /.product-purchase -->
-                    </div>
+                   
                     <!-- end /.single-product -->
 
                     <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
@@ -1181,7 +1142,294 @@ START FOLLOWERS FEED AREA
             </div>
         </div>
         <!-- end /.row -->
+
+       
     </div>
+     <div class="row " >
+              <div class="col-md-12">
+                <div class="product-title-area">
+                    <div class="product__title">
+                        <h2>محصولات پر فروش</h2>
+                    </div>
+
+                    <div class="product__slider-nav follow_feed_nav rounded">
+                        <span class="lnr lnr-chevron-left nav_left"></span>
+                        <span class="lnr lnr-chevron-right nav_right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="product_slider dir-rtl " >
+                    <!-- start .single-product -->
+                    @foreach($topSellers as $topSellers)
+                    <div class="product product--card">
+
+                        <div class="product__thumbnail">
+                            <img src="assets/images/new/p4.jpg" alt="Product Image">
+                            <div class="prod_btn">
+                                <a href="single-product.html" class="transparent btn--sm btn--round">اطلاعات بیشتر</a>
+                                <a href="single-product.html" class="transparent btn--sm btn--round">نمایش </a>
+                            </div>
+                            <!-- end /.prod_btn -->
+                        </div>
+                        <!-- end /.product__thumbnail -->
+
+                        <div class="product-desc">
+                            <a href="#" class="product_title">
+                                <h4>{{$topSellers->package_title}} </h4>
+                            </a>
+                            <ul class="titlebtm">
+                                <li>
+                                    <img class="auth-img" src="assets/images/new/auth.jpg" alt="author image">
+                                    <p>
+                                        <a href="#">دامن دریا </a>
+                                    </p>
+                                </li>
+                                <li class="product_cat">
+                                    <a href="#">
+                                        <span class="lnr lnr-book"></span>افزونه </a>
+                                </li>
+                            </ul>
+
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است.</p>
+                        </div>
+                        <!-- end /.product-desc -->
+
+                        <div class="product-purchase">
+                            <div class="price_love">
+                                <span>10 تومان - 50 تومان</span>
+                                <p>
+                                    <span class="lnr lnr-heart"></span> 90</p>
+                            </div>
+                            <div class="sell">
+                                <p>
+                                    <span class="lnr lnr-cart"></span>
+                                    <span>16</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end /.product-purchase -->
+                    </div>
+
+                    @endforeach
+                    <!-- end /.single-product -->
+
+                    <!-- start .single-product -->
+                   
+                    <!-- end /.single-product -->
+
+                    <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
+                    <!--<div class="product product&#45;&#45;card">-->
+
+                        <!--<div class="product__thumbnail">-->
+                            <!--<img src="assets/images/new/p6.jpg" alt="Product Image">-->
+                            <!--<div class="prod_btn">-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اطلاعات بیشتر</a>-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">نمایش </a>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end /.prod_btn &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product__thumbnail &ndash;&gt;-->
+
+                        <!--<div class="product-desc">-->
+                            <!--<a href="#" class="product_title">-->
+                                <!--<h4>قالب چند فروشندگی ورد پرسs</h4>-->
+                            <!--</a>-->
+                            <!--<ul class="titlebtm">-->
+                                <!--<li>-->
+                                    <!--<img class="auth-img" src="assets/images/new/auth3.jpg" alt="author image">-->
+                                    <!--<p>-->
+                                        <!--<a href="#">دامن دریا </a>-->
+                                    <!--</p>-->
+                                <!--</li>-->
+                                <!--<li class="product_cat">-->
+                                    <!--<a href="#">-->
+                                        <!--<span class="lnr lnr-book"></span>ورد پرس </a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                            <!--<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                                <!--است.</p>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-desc &ndash;&gt;-->
+
+                        <!--<div class="product-purchase">-->
+                            <!--<div class="price_love">-->
+                                <!--<span>رایگان </span>-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-heart"></span> 24</p>-->
+                            <!--</div>-->
+                            <!--<div class="sell">-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-cart"></span>-->
+                                    <!--<span>27</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-purchase &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; end /.single-product &ndash;&gt;-->
+
+                    <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
+                    <!--<div class="product product&#45;&#45;card">-->
+
+                        <!--<div class="product__thumbnail">-->
+                            <!--<img src="assets/images/new/p4.jpg" alt="Product Image">-->
+                            <!--<div class="prod_btn">-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اطلاعات بیشتر</a>-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">نمایش </a>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end /.prod_btn &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product__thumbnail &ndash;&gt;-->
+
+                        <!--<div class="product-desc">-->
+                            <!--<a href="#" class="product_title">-->
+                                <!--<h4>اسکریپ دریا </h4>-->
+                            <!--</a>-->
+                            <!--<ul class="titlebtm">-->
+                                <!--<li>-->
+                                    <!--<img class="auth-img" src="assets/images/new/auth.jpg" alt="author image">-->
+                                    <!--<p>-->
+                                        <!--<a href="#">دامن دریا </a>-->
+                                    <!--</p>-->
+                                <!--</li>-->
+                                <!--<li class="product_cat">-->
+                                    <!--<a href="#">-->
+                                        <!--<span class="lnr lnr-book"></span>افزونه </a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                            <!--<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                                <!--است.</p>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-desc &ndash;&gt;-->
+
+                        <!--<div class="product-purchase">-->
+                            <!--<div class="price_love">-->
+                                <!--<span>10 تومان - 50 تومان</span>-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-heart"></span> 90</p>-->
+                            <!--</div>-->
+                            <!--<div class="sell">-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-cart"></span>-->
+                                    <!--<span>16</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-purchase &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; end /.single-product &ndash;&gt;-->
+
+                    <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
+
+                    <!--<div class="product product&#45;&#45;card">-->
+
+                        <!--<div class="product__thumbnail">-->
+                            <!--<img src="assets/images/new/p2.jpg" alt="Product Image">-->
+                            <!--<div class="prod_btn">-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اطلاعات بیشتر</a>-->
+                                {{-- <!--<a href="{{route(['cart.add','id'=>$package->id])}}" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اضافه کردن به سبد خرید  </a>--> --}}
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end /.prod_btn &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product__thumbnail &ndash;&gt;-->
+
+                        <!--<div class="product-desc">-->
+                            <!--<a href="#" class="product_title">-->
+                                <!--<h4>قالب psd </h4>-->
+                            <!--</a>-->
+                            <!--<ul class="titlebtm">-->
+                                <!--<li>-->
+                                    <!--<img class="auth-img" src="assets/images/new/auth2.jpg" alt="author image">-->
+                                    <!--<p>-->
+                                        <!--<a href="#">دامن دریا </a>-->
+                                    <!--</p>-->
+                                <!--</li>-->
+                                <!--<li class="product_cat">-->
+                                    <!--<a href="#">-->
+                                        <!--<span class="lnr lnr-book"></span>افزونه </a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                            <!--<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                                <!--است.</p>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-desc &ndash;&gt;-->
+
+                        <!--<div class="product-purchase">-->
+                            <!--<div class="price_love">-->
+                                <!--<span>10 تومان</span>-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-heart"></span> 48</p>-->
+                            <!--</div>-->
+                            <!--<div class="sell">-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-cart"></span>-->
+                                    <!--<span>50</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-purchase &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; end /.single-product &ndash;&gt;-->
+
+                    <!--&lt;!&ndash; start .single-product &ndash;&gt;-->
+                    <!--<div class="product product&#45;&#45;card">-->
+
+                        <!--<div class="product__thumbnail">-->
+                            <!--<img src="assets/images/new/p6.jpg" alt="Product Image">-->
+                            <!--<div class="prod_btn">-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">اطلاعات بیشتر</a>-->
+                                <!--<a href="single-product.html" class="transparent btn&#45;&#45;sm btn&#45;&#45;round">نمایش </a>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; end /.prod_btn &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product__thumbnail &ndash;&gt;-->
+
+                        <!--<div class="product-desc">-->
+                            <!--<a href="#" class="product_title">-->
+                                <!--<h4>قالب چند فروشندگی ورد پرسs</h4>-->
+                            <!--</a>-->
+                            <!--<ul class="titlebtm">-->
+                                <!--<li>-->
+                                    <!--<img class="auth-img" src="assets/images/new/auth3.jpg" alt="author image">-->
+                                    <!--<p>-->
+                                        <!--<a href="#">دامن دریا </a>-->
+                                    <!--</p>-->
+                                <!--</li>-->
+                                <!--<li class="product_cat">-->
+                                    <!--<a href="#">-->
+                                        <!--<span class="lnr lnr-book"></span>ورد پرس </a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                            <!--<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                                <!--است.</p>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-desc &ndash;&gt;-->
+
+                        <!--<div class="product-purchase">-->
+                            <!--<div class="price_love">-->
+                                <!--<span>رایگان </span>-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-heart"></span> 24</p>-->
+                            <!--</div>-->
+                            <!--<div class="sell">-->
+                                <!--<p>-->
+                                    <!--<span class="lnr lnr-cart"></span>-->
+                                    <!--<span>27</span>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; end /.product-purchase &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; end /.single-product &ndash;&gt;-->
+                </div>
+            </div>
+        </div>
     <!-- start /.container -->
 </section>
 <!--================================

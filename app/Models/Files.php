@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\Post;
 use App\Traits\Categorizable;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 
 use Nicolaslopezj\Searchable\SearchableTrait;
@@ -92,6 +93,16 @@ class Files extends Model
             ]);   
            
         }
+
+    }
+
+    public  static function searchFiles($q,$categoryId){
+
+    if($categoryId){
+
+
+        
+    }
 
     }
 

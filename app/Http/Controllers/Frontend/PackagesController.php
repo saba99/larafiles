@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Comment;
 use App\Models\Files;
 use App\Models\Package;
+use App\Models\userRating;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,9 +32,16 @@ class PackagesController extends Controller
 
        ($user_name=Auth::user()->name);
 
+       $isRated=userRating::where('user_id',Auth::user()->id)->where('package_id',$package_id)->count()>0;
+
+        $rating=round(userRating::WHERE('package_id',$package_id)->avg('point'));
+
+           //dd($rating);
+       //dd($isRated);
+
        //$current_user=5;
        
-        return view('frontend.packages.index', compact([ 'package_item', 'current_user', 'packageFiles', 'user_name','package','comments']));
+        return view('frontend.packages.index', compact([ 'package_item', 'isRated','rating','package_id', 'current_user', 'packageFiles', 'user_name','package','comments']));
     }  
 
     public  function singlePackage(Request $request, $package_id){

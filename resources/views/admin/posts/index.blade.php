@@ -1,6 +1,11 @@
 
-
 @extends('admin.layout.master') 
+
+@section('scripts')
+
+
+
+@endsection
 
 @section('content')
 <div class="content-wrapper">

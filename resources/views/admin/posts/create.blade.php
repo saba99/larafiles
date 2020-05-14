@@ -1,5 +1,7 @@
 @extends('admin.layout.master')
 
+
+
 @section('content')
 
 <div class="content-wrapper" style="min-height:920px;">

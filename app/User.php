@@ -7,11 +7,16 @@ use App\Models\Payment;
 use App\Models\Subscribe;
 use App\Models\Comment;
 use App\Models\Package;
+use App\Models\Profile;
 use App\Models\Order;
 use App\Models\Plan;
 use App\Models\Post;
 use Carbon\Carbon;
 use App\Models\Ticket;
+
+use App\Models\Topic;
+
+use App\Models\Message;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -106,5 +111,21 @@ class User extends Authenticatable
     {
         return $this->hasMany(Ticket::class);
     }
-    
+     
+
+    public function profile(){
+
+        return $this->hasOne(Profile::class);
+    }
+
+    public function messages(){
+
+        return $this->hasMany(Message::class);
+    }
+
+    public function topics()
+    {
+
+        return $this->hasMany(Topic::class);
+    }
 }

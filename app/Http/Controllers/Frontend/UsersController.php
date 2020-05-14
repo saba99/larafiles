@@ -14,7 +14,8 @@ use App\Models\Support;
 use App\Models\City;
 use App\Models\Province;
 use Carbon\Carbon;
-use GuzzleHttp\Psr7\Request as GuzzleRequest;
+use Laravel\Socialite\Facades\Socialite;
+
 //use Laravel\Socialite\Facades\Socialite;
 
 //use  Socialite;
@@ -98,7 +99,9 @@ class UsersController extends Controller
     public function profile(){
 
         return view('frontend.profile.index');
-    } 
+    }  
+
+   
 
     public function  redirectToProvider($provider){
 
@@ -110,7 +113,7 @@ class UsersController extends Controller
 
 
         $user=Socialite::driver($provider)->user();
-        dd($user);
+       // dd($user);
         $exitstingUser=User::whereEmail($user->getEmail())->first();
 
         if($exitstingUser){
@@ -123,7 +126,7 @@ class UsersController extends Controller
 
         User::create([
 
-        'name'=>$user->getName(),
+        //'name'=>$user->getName(),
         'email'=>$user->getEmail(),
         'password'=>bcrypt('$2y$10$akiCza2jp3Qlnzm0/o84xeae/7')
 

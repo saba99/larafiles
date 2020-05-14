@@ -53,7 +53,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.3
     </div>
-    <strong>Copyright &copy; 2015-2019 <a href="https://www.roxo.ir">Roxo Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2015-2019 <a href="">Saba Studio</a>.</strong> All rights
     reserved.
   </footer>
 
